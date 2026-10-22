@@ -39,6 +39,60 @@ Cómo leerlo:
 
 ## Verificación automática
 
+<!-- AUTO:nube-ip-de-centro-de-datos:START -->
+### Red: Nube (IP de centro de datos)
+
+_Generado por `npm run verify-stores` desde la red **Nube (IP de centro de datos)** el 22/10/2026, 7:34:38. No editar a mano este bloque._
+
+| Tienda | 07009 | 07300 | 07360 | Envío base | Pedido mínimo | Fuente envío | Bloqueo detectado |
+|---|---|---|---|---|---|---|---|
+| Mercadona | ✅ reparte | ✅ reparte | ✅ reparte | 8,20 € | 60,00 € | official_doc | — |
+| Carrefour | ❔ sin dato | ❔ sin dato | ❔ sin dato | sin dato | sin dato | none | cloudflare |
+| Alcampo | ✅ reparte | ✅ reparte | ✅ reparte | 7,00 € | 0 € | official_doc | — |
+| Eroski | ❔ sin dato | ❔ sin dato | ❔ sin dato | sin dato | sin dato | none | recaptcha |
+| El Corte Inglés / Hipercor | ❔ sin dato | ❔ sin dato | ❔ sin dato | sin dato | sin dato | none | akamai |
+| Hiper Centro (TuHiper) | ✅ reparte | ✅ reparte | ✅ reparte | 6,95 € | 0 € | live | — |
+| Lidl | 🛍️ solo bazar | 🛍️ solo bazar | 🛍️ solo bazar | sin dato | sin dato | none | — |
+| Aldi | — sin online | — sin online | — sin online | sin dato | sin dato | none | — |
+
+<details><summary>Evidencias</summary>
+
+- **Mercadona 07009** · delivers · API change-pc → 200, almacén 4744
+- **Mercadona 07300** · delivers · API change-pc → 200, almacén 4781
+- **Mercadona 07360** · delivers · API change-pc → 200, almacén 4519
+- **Mercadona envío** · Fuentes: Coste de preparación (editado 2025-11-28); Pedido mínimo (editado 2026-02-10); Tramos disponibles y horarios de reparto (editado 2025-12-01). Coste igual para todos los CP con servicio según la FAQ. · https://ayuda.tienda.mercadona.es/hc/es/articles/360000857071-Coste-de-preparaci%C3%B3n
+- **Carrefour 07009** · unknown · HTTP 403 "Un momento…" · _Cloudflare (desafío anti-bot) desde esta red. Verificar con el worker de casa (Mac)._
+- **Carrefour 07300** · unknown · HTTP 403 "Un momento…" · _Cloudflare (desafío anti-bot) desde esta red. Verificar con el worker de casa (Mac)._
+- **Carrefour 07360** · unknown · HTTP 403 "Un momento…" · _Cloudflare (desafío anti-bot) desde esta red. Verificar con el worker de casa (Mac)._
+- **Carrefour envío** · Pendiente del conector completo (worker de casa).
+- **Alcampo 07009** · delivers · deliverability=DELIVERABLE método=HOME_DELIVERY dirección="Carrer Gremi de Boneters, 52, Nord, 07009 Palma, Illes Balears, España"
+- **Alcampo 07300** · delivers · deliverability=DELIVERABLE método=HOME_DELIVERY dirección="Gran Via Colom, 218, 07300 Inca, Illes Balears, España"
+- **Alcampo 07360** · delivers · deliverability=DELIVERABLE método=HOME_DELIVERY dirección="Avinguda del Cocó, 2, 07360 Lloseta, Illes Balears, España"
+- **Alcampo envío** · Tarifa "Nacional" de la página oficial. La web avisa de que el coste varía según franja y día: el importe real se confirma al elegir franja. · https://www.compraonline.alcampo.es/content/servicios-entrega-recogida
+- **Eroski 07009** · unknown · HTTP 200 "Comprobando tu navegador - reCAPTCHA" · _Comprobación reCAPTCHA del navegador desde esta red. Verificar con el worker de casa (Mac)._
+- **Eroski 07300** · unknown · HTTP 200 "Comprobando tu navegador - reCAPTCHA" · _Comprobación reCAPTCHA del navegador desde esta red. Verificar con el worker de casa (Mac)._
+- **Eroski 07360** · unknown · HTTP 200 "Comprobando tu navegador - reCAPTCHA" · _Comprobación reCAPTCHA del navegador desde esta red. Verificar con el worker de casa (Mac)._
+- **Eroski envío** · Pendiente del conector completo (worker de casa).
+- **El Corte Inglés / Hipercor 07009** · unknown · HTTP 503 "Access Denied" · _Akamai ("Access Denied") desde esta red. Verificar con el worker de casa (Mac)._
+- **El Corte Inglés / Hipercor 07300** · unknown · HTTP 403 "Access Denied" · _Akamai ("Access Denied") desde esta red. Verificar con el worker de casa (Mac)._
+- **El Corte Inglés / Hipercor 07360** · unknown · HTTP 403 "Access Denied" · _Akamai ("Access Denied") desde esta red. Verificar con el worker de casa (Mac)._
+- **El Corte Inglés / Hipercor envío** · Pendiente del conector completo (worker de casa).
+- **Hiper Centro (TuHiper) 07009** · delivers · Población "Palma Ciudad y Alrededores (07000-07015)" (id 9000) en el selector de entrega de Mallorca
+- **Hiper Centro (TuHiper) 07300** · delivers · Población "Inca" (id 9215) en el selector de entrega de Mallorca
+- **Hiper Centro (TuHiper) 07360** · delivers · Población "Lloseta" (id 9280) en el selector de entrega de Mallorca
+- **Hiper Centro (TuHiper) envío** · Pago a la entrega (efectivo o tarjeta). Acceso de cliente con móvil + clave de 4 dígitos. · https://tuhiper.com/A9/Login.aspx?p_IdCP=9280
+- **Lidl 07009** · bazaar_only · Búsqueda "leche": 8 resultados y ninguno es leche (p. ej. "Espumador de leche »SMSP 500 A1«", "Espumador de leche", "Espumador de leche", "Cuña de queso viejo de oveja")
+- **Lidl 07300** · bazaar_only · Búsqueda "leche": 8 resultados y ninguno es leche (p. ej. "Espumador de leche »SMSP 500 A1«", "Espumador de leche", "Espumador de leche", "Cuña de queso viejo de oveja")
+- **Lidl 07360** · bazaar_only · Búsqueda "leche": 8 resultados y ninguno es leche (p. ej. "Espumador de leche »SMSP 500 A1«", "Espumador de leche", "Espumador de leche", "Cuña de queso viejo de oveja")
+- **Lidl envío** · No aplica: sin alimentación online.
+- **Aldi 07009** · no_online · La web no tiene carrito ni compra online (solo ofertas y folleto por región)
+- **Aldi 07300** · no_online · La web no tiene carrito ni compra online (solo ofertas y folleto por región)
+- **Aldi 07360** · no_online · La web no tiene carrito ni compra online (solo ofertas y folleto por región)
+- **Aldi envío** · No aplica: sin compra online.
+
+</details>
+<!-- AUTO:nube-ip-de-centro-de-datos:END -->
+
 <!-- AUTO:INSERT -->
 
 ## Ficha por tienda

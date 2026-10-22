@@ -1,0 +1,422 @@
+{
+  "label": "Nube (IP de centro de datos)",
+  "when": "22/10/2026, 7:34:38",
+  "locations": [
+    {
+      "cp": "07009",
+      "town": "Palma"
+    },
+    {
+      "cp": "07300",
+      "town": "Inca"
+    },
+    {
+      "cp": "07360",
+      "town": "Lloseta"
+    }
+  ],
+  "results": [
+    {
+      "storeId": "mercadona",
+      "coverage": [
+        {
+          "storeId": "mercadona",
+          "cp": "07009",
+          "checkedAt": "2026-10-22T05:30:28.756Z",
+          "status": "delivers",
+          "source": "live",
+          "evidence": "API change-pc → 200, almacén 4744",
+          "storeRef": {
+            "warehouse": "4744"
+          }
+        },
+        {
+          "storeId": "mercadona",
+          "cp": "07300",
+          "checkedAt": "2026-10-22T05:30:29.519Z",
+          "status": "delivers",
+          "source": "live",
+          "evidence": "API change-pc → 200, almacén 4781",
+          "storeRef": {
+            "warehouse": "4781"
+          }
+        },
+        {
+          "storeId": "mercadona",
+          "cp": "07360",
+          "checkedAt": "2026-10-22T05:30:30.236Z",
+          "status": "delivers",
+          "source": "live",
+          "evidence": "API change-pc → 200, almacén 4519",
+          "storeRef": {
+            "warehouse": "4519"
+          }
+        }
+      ],
+      "terms": {
+        "storeId": "mercadona",
+        "cp": "07360",
+        "baseCost": 8.2,
+        "minOrder": 60,
+        "freeFrom": null,
+        "slots": [
+          {
+            "label": "lunes a sábado, tramos de 1 o 2 h",
+            "from": "7:00",
+            "to": "22:00"
+          }
+        ],
+        "loginToSeePrices": false,
+        "source": "official_doc",
+        "sourceUrl": "https://ayuda.tienda.mercadona.es/hc/es/articles/360000857071-Coste-de-preparaci%C3%B3n",
+        "checkedAt": "2026-10-22T05:30:30.438Z",
+        "notes": "Fuentes: Coste de preparación (editado 2025-11-28); Pedido mínimo (editado 2026-02-10); Tramos disponibles y horarios de reparto (editado 2025-12-01). Coste igual para todos los CP con servicio según la FAQ."
+      }
+    },
+    {
+      "storeId": "carrefour",
+      "coverage": [
+        {
+          "storeId": "carrefour",
+          "cp": "07009",
+          "status": "unknown",
+          "source": "none",
+          "checkedAt": "2026-10-22T05:30:31.082Z",
+          "blockedBy": "cloudflare",
+          "evidence": "HTTP 403 \"Un momento…\"",
+          "reason": "Cloudflare (desafío anti-bot) desde esta red. Verificar con el worker de casa (Mac)."
+        },
+        {
+          "storeId": "carrefour",
+          "cp": "07300",
+          "status": "unknown",
+          "source": "none",
+          "checkedAt": "2026-10-22T05:30:39.969Z",
+          "blockedBy": "cloudflare",
+          "evidence": "HTTP 403 \"Un momento…\"",
+          "reason": "Cloudflare (desafío anti-bot) desde esta red. Verificar con el worker de casa (Mac)."
+        },
+        {
+          "storeId": "carrefour",
+          "cp": "07360",
+          "status": "unknown",
+          "source": "none",
+          "checkedAt": "2026-10-22T05:30:48.451Z",
+          "blockedBy": "cloudflare",
+          "evidence": "HTTP 403 \"Un momento…\"",
+          "reason": "Cloudflare (desafío anti-bot) desde esta red. Verificar con el worker de casa (Mac)."
+        }
+      ],
+      "terms": {
+        "storeId": "carrefour",
+        "cp": "07360",
+        "baseCost": null,
+        "minOrder": null,
+        "freeFrom": null,
+        "slots": [],
+        "loginToSeePrices": null,
+        "source": "none",
+        "checkedAt": "2026-10-22T05:30:56.895Z",
+        "notes": "Pendiente del conector completo (worker de casa)."
+      }
+    },
+    {
+      "storeId": "alcampo",
+      "coverage": [
+        {
+          "storeId": "alcampo",
+          "cp": "07009",
+          "checkedAt": "2026-10-22T05:30:56.896Z",
+          "source": "live",
+          "status": "delivers",
+          "pickup": true,
+          "evidence": "deliverability=DELIVERABLE método=HOME_DELIVERY dirección=\"Carrer Gremi de Boneters, 52, Nord, 07009 Palma, Illes Balears, España\"",
+          "storeRef": {
+            "regionId": "e5a30b4b-9f1c-468c-9e9f-95ce1b303693"
+          }
+        },
+        {
+          "storeId": "alcampo",
+          "cp": "07300",
+          "checkedAt": "2026-10-22T05:31:15.241Z",
+          "source": "live",
+          "status": "delivers",
+          "pickup": true,
+          "evidence": "deliverability=DELIVERABLE método=HOME_DELIVERY dirección=\"Gran Via Colom, 218, 07300 Inca, Illes Balears, España\"",
+          "storeRef": {
+            "regionId": "e5a30b4b-9f1c-468c-9e9f-95ce1b303693"
+          }
+        },
+        {
+          "storeId": "alcampo",
+          "cp": "07360",
+          "checkedAt": "2026-10-22T05:31:34.142Z",
+          "source": "live",
+          "status": "delivers",
+          "pickup": true,
+          "evidence": "deliverability=DELIVERABLE método=HOME_DELIVERY dirección=\"Avinguda del Cocó, 2, 07360 Lloseta, Illes Balears, España\"",
+          "storeRef": {
+            "regionId": "e5a30b4b-9f1c-468c-9e9f-95ce1b303693"
+          }
+        }
+      ],
+      "terms": {
+        "storeId": "alcampo",
+        "cp": "07360",
+        "baseCost": 7,
+        "minOrder": 0,
+        "freeFrom": null,
+        "slots": [
+          {
+            "label": "día siguiente o posterior (7:00–22:00)",
+            "from": "07:00",
+            "to": "22:00",
+            "cost": 7
+          },
+          {
+            "label": "mismo día",
+            "cost": 9.9
+          }
+        ],
+        "loginToSeePrices": false,
+        "source": "official_doc",
+        "sourceUrl": "https://www.compraonline.alcampo.es/content/servicios-entrega-recogida",
+        "checkedAt": "2026-10-22T05:31:52.059Z",
+        "notes": "Tarifa \"Nacional\" de la página oficial. La web avisa de que el coste varía según franja y día: el importe real se confirma al elegir franja."
+      }
+    },
+    {
+      "storeId": "eroski",
+      "coverage": [
+        {
+          "storeId": "eroski",
+          "cp": "07009",
+          "status": "unknown",
+          "source": "none",
+          "checkedAt": "2026-10-22T05:32:01.826Z",
+          "blockedBy": "recaptcha",
+          "evidence": "HTTP 200 \"Comprobando tu navegador - reCAPTCHA\"",
+          "reason": "Comprobación reCAPTCHA del navegador desde esta red. Verificar con el worker de casa (Mac)."
+        },
+        {
+          "storeId": "eroski",
+          "cp": "07300",
+          "status": "unknown",
+          "source": "none",
+          "checkedAt": "2026-10-22T05:32:11.348Z",
+          "blockedBy": "recaptcha",
+          "evidence": "HTTP 200 \"Comprobando tu navegador - reCAPTCHA\"",
+          "reason": "Comprobación reCAPTCHA del navegador desde esta red. Verificar con el worker de casa (Mac)."
+        },
+        {
+          "storeId": "eroski",
+          "cp": "07360",
+          "status": "unknown",
+          "source": "none",
+          "checkedAt": "2026-10-22T05:32:20.124Z",
+          "blockedBy": "recaptcha",
+          "evidence": "HTTP 200 \"Comprobando tu navegador - reCAPTCHA\"",
+          "reason": "Comprobación reCAPTCHA del navegador desde esta red. Verificar con el worker de casa (Mac)."
+        }
+      ],
+      "terms": {
+        "storeId": "eroski",
+        "cp": "07360",
+        "baseCost": null,
+        "minOrder": null,
+        "freeFrom": null,
+        "slots": [],
+        "loginToSeePrices": null,
+        "source": "none",
+        "checkedAt": "2026-10-22T05:32:28.919Z",
+        "notes": "Pendiente del conector completo (worker de casa)."
+      }
+    },
+    {
+      "storeId": "eci",
+      "coverage": [
+        {
+          "storeId": "eci",
+          "cp": "07009",
+          "status": "unknown",
+          "source": "none",
+          "checkedAt": "2026-10-22T05:32:28.919Z",
+          "blockedBy": "akamai",
+          "evidence": "HTTP 503 \"Access Denied\"",
+          "reason": "Akamai (\"Access Denied\") desde esta red. Verificar con el worker de casa (Mac)."
+        },
+        {
+          "storeId": "eci",
+          "cp": "07300",
+          "status": "unknown",
+          "source": "none",
+          "checkedAt": "2026-10-22T05:32:37.422Z",
+          "blockedBy": "akamai",
+          "evidence": "HTTP 403 \"Access Denied\"",
+          "reason": "Akamai (\"Access Denied\") desde esta red. Verificar con el worker de casa (Mac)."
+        },
+        {
+          "storeId": "eci",
+          "cp": "07360",
+          "status": "unknown",
+          "source": "none",
+          "checkedAt": "2026-10-22T05:32:45.874Z",
+          "blockedBy": "akamai",
+          "evidence": "HTTP 403 \"Access Denied\"",
+          "reason": "Akamai (\"Access Denied\") desde esta red. Verificar con el worker de casa (Mac)."
+        }
+      ],
+      "terms": {
+        "storeId": "eci",
+        "cp": "07360",
+        "baseCost": null,
+        "minOrder": null,
+        "freeFrom": null,
+        "slots": [],
+        "loginToSeePrices": null,
+        "source": "none",
+        "checkedAt": "2026-10-22T05:32:54.317Z",
+        "notes": "Pendiente del conector completo (worker de casa)."
+      }
+    },
+    {
+      "storeId": "hipercentro",
+      "coverage": [
+        {
+          "storeId": "hipercentro",
+          "cp": "07009",
+          "checkedAt": "2026-10-22T05:32:54.317Z",
+          "status": "delivers",
+          "pickup": true,
+          "source": "live",
+          "evidence": "Población \"Palma Ciudad y Alrededores (07000-07015)\" (id 9000) en el selector de entrega de Mallorca",
+          "storeRef": {
+            "townId": "9000",
+            "townLabel": "Palma Ciudad y Alrededores (07000-07015)"
+          }
+        },
+        {
+          "storeId": "hipercentro",
+          "cp": "07300",
+          "checkedAt": "2026-10-22T05:33:04.458Z",
+          "status": "delivers",
+          "pickup": true,
+          "source": "live",
+          "evidence": "Población \"Inca\" (id 9215) en el selector de entrega de Mallorca",
+          "storeRef": {
+            "townId": "9215",
+            "townLabel": "Inca"
+          }
+        },
+        {
+          "storeId": "hipercentro",
+          "cp": "07360",
+          "checkedAt": "2026-10-22T05:33:12.232Z",
+          "status": "delivers",
+          "pickup": true,
+          "source": "live",
+          "evidence": "Población \"Lloseta\" (id 9280) en el selector de entrega de Mallorca",
+          "storeRef": {
+            "townId": "9280",
+            "townLabel": "Lloseta"
+          }
+        }
+      ],
+      "terms": {
+        "storeId": "hipercentro",
+        "cp": "07360",
+        "baseCost": 6.95,
+        "minOrder": 0,
+        "freeFrom": null,
+        "slots": [],
+        "loginToSeePrices": false,
+        "source": "live",
+        "sourceUrl": "https://tuhiper.com/A9/Login.aspx?p_IdCP=9280",
+        "checkedAt": "2026-10-22T05:33:27.433Z",
+        "notes": "Pago a la entrega (efectivo o tarjeta). Acceso de cliente con móvil + clave de 4 dígitos."
+      }
+    },
+    {
+      "storeId": "lidl",
+      "coverage": [
+        {
+          "storeId": "lidl",
+          "cp": "07009",
+          "checkedAt": "2026-10-22T05:33:44.591Z",
+          "status": "bazaar_only",
+          "source": "live",
+          "evidence": "Búsqueda \"leche\": 8 resultados y ninguno es leche (p. ej. \"Espumador de leche »SMSP 500 A1«\", \"Espumador de leche\", \"Espumador de leche\", \"Cuña de queso viejo de oveja\")"
+        },
+        {
+          "storeId": "lidl",
+          "cp": "07300",
+          "checkedAt": "2026-10-22T05:33:58.013Z",
+          "status": "bazaar_only",
+          "source": "live",
+          "evidence": "Búsqueda \"leche\": 8 resultados y ninguno es leche (p. ej. \"Espumador de leche »SMSP 500 A1«\", \"Espumador de leche\", \"Espumador de leche\", \"Cuña de queso viejo de oveja\")"
+        },
+        {
+          "storeId": "lidl",
+          "cp": "07360",
+          "checkedAt": "2026-10-22T05:34:08.791Z",
+          "status": "bazaar_only",
+          "source": "live",
+          "evidence": "Búsqueda \"leche\": 8 resultados y ninguno es leche (p. ej. \"Espumador de leche »SMSP 500 A1«\", \"Espumador de leche\", \"Espumador de leche\", \"Cuña de queso viejo de oveja\")"
+        }
+      ],
+      "terms": {
+        "storeId": "lidl",
+        "cp": "07360",
+        "baseCost": null,
+        "minOrder": null,
+        "freeFrom": null,
+        "slots": [],
+        "loginToSeePrices": null,
+        "source": "none",
+        "checkedAt": "2026-10-22T05:34:20.511Z",
+        "notes": "No aplica: sin alimentación online."
+      }
+    },
+    {
+      "storeId": "aldi",
+      "coverage": [
+        {
+          "storeId": "aldi",
+          "cp": "07009",
+          "checkedAt": "2026-10-22T05:34:20.511Z",
+          "status": "no_online",
+          "source": "live",
+          "evidence": "La web no tiene carrito ni compra online (solo ofertas y folleto por región)"
+        },
+        {
+          "storeId": "aldi",
+          "cp": "07300",
+          "checkedAt": "2026-10-22T05:34:26.427Z",
+          "status": "no_online",
+          "source": "live",
+          "evidence": "La web no tiene carrito ni compra online (solo ofertas y folleto por región)"
+        },
+        {
+          "storeId": "aldi",
+          "cp": "07360",
+          "checkedAt": "2026-10-22T05:34:32.253Z",
+          "status": "no_online",
+          "source": "live",
+          "evidence": "La web no tiene carrito ni compra online (solo ofertas y folleto por región)"
+        }
+      ],
+      "terms": {
+        "storeId": "aldi",
+        "cp": "07360",
+        "baseCost": null,
+        "minOrder": null,
+        "freeFrom": null,
+        "slots": [],
+        "loginToSeePrices": null,
+        "source": "none",
+        "checkedAt": "2026-10-22T05:34:37.973Z",
+        "notes": "No aplica: sin compra online."
+      }
+    }
+  ]
+}
