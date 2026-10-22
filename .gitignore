@@ -1,0 +1,18 @@
+node_modules/
+.next/
+dist/
+coverage/
+*.tsbuildinfo
+.DS_Store
+
+# Secretos y datos locales
+.env
+.env.*
+!.env.example
+
+# Perfiles de navegador, sesiones y capturas de depuración (nunca al repo)
+.browser-profiles/
+.sessions/
+.debug/
+playwright-report/
+test-results/

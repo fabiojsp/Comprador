@@ -1,0 +1,22 @@
+# Fragilidad de conectores
+
+Qué se rompe con más facilidad y cómo detectarlo. Se actualiza al cerrar cada fase.
+
+**Detección general:** `npm run verify-stores` devuelve `unknown` con el motivo "Error del sondeo (posible cambio en la web)" cuando un paso del navegador falla. Si una tienda que antes salía ✅ pasa a ❔, revisar primero esta lista.
+
+## Fase 0
+
+| Tienda | Punto frágil | Síntoma | Cómo detectarlo / arreglarlo |
+|---|---|---|---|
+| Mercadona | `PUT /api/postal-codes/actions/change-pc/` y la cabecera `x-customer-wh` | Todos los CP salen `unknown` con HTTP ≠ 200/404 | Test `parseCoverageResponse`; abrir tienda.mercadona.es, introducir un CP y mirar la petición en DevTools |
+| Mercadona | IDs de artículos del centro de ayuda (`HELP_ARTICLES`) y frases "El coste de preparación es de…" y "El pedido mínimo es de…" | Envío o mínimo pasan a `null` (`source: none`) | Fixtures `mercadona/help-*.json`; si cambian, buscar el artículo nuevo en ayuda.tienda.mercadona.es |
+| Mercadona | Akamai Bot Manager | 403 en la API desde la nube | `blockedBy: 'akamai'` → pasar Mercadona a `affinity: 'home'` |
+| Alcampo | Diálogo de dirección: botón con el CP en la cabecera, "Cambiar el método de entrega", placeholder "Busca tu dirección", "Confirmar ubicación" | Timeout en `locator.click` | El error aparece en la evidencia de `verify-stores`; actualizar los textos o roles en `stores/alcampo/probe.ts` |
+| Alcampo | Geocodificación de Google: con solo el CP a veces no resuelve una dirección (pasó con 07300) | `unknown` "Dirección no geocodificada" | El sondeo prueba 3 variantes; en la app se usa la dirección completa del perfil |
+| Alcampo | Texto de la tarifa "Nacional" en la página de servicios | `baseCost: null` | Fixture `alcampo/servicios-entrega-recogida.txt` |
+| Hiper Centro | ASP.NET WebForms: botón "Mallorca", `select[name=LbCP]`, redirección a `Login.aspx` | Timeout o lista vacía | Fixture `hipercentro/poblaciones-mallorca.json` (110 poblaciones); comprobar que el `<select>` sigue llamándose `LbCP` |
+| Hiper Centro | Texto "Gastos del Servicio Standard: X€" | `baseCost: null` | Fixture `hipercentro/login-lloseta.txt` |
+| Lidl | `[data-qa-label="product-grid-box-title"]` en la búsqueda | `unknown` "No se pudieron leer los resultados" | Revisar el selector en lidl.es/q/search?q=leche |
+| Aldi | Detección de carrito por texto | Falso `unknown` si aparece la palabra "carrito" | Revisión manual |
+| Carrefour / Eroski / ECI | Bloqueo anti-bot desde IP de centro de datos | `blockedBy` cloudflare / recaptcha / akamai | Esperado en la nube. Verificar desde el Mac. **No esquivar.** |
+| Todas | Detección de páginas de bloqueo (`shared/block-detect.ts`) por título o texto | Un bloqueo nuevo se interpreta como página normal | Fixtures `blocks/*.html`; añadir la nueva página de bloqueo como fixture cuando aparezca |

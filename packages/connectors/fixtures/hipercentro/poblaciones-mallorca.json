@@ -1,0 +1,442 @@
+[
+ {
+  "value": "0",
+  "label": "Elija Población de Entrega"
+ },
+ {
+  "value": "9265",
+  "label": "Alaro"
+ },
+ {
+  "value": "9290",
+  "label": "Alcudia"
+ },
+ {
+  "value": "9185",
+  "label": "Algaida"
+ },
+ {
+  "value": "9535",
+  "label": "Alq. Blanca, PortoPetro, Mondrago ..."
+ },
+ {
+  "value": "9075",
+  "label": "Andratx"
+ },
+ {
+  "value": "9380",
+  "label": "Ariany"
+ },
+ {
+  "value": "9410",
+  "label": "Arta"
+ },
+ {
+  "value": "9130",
+  "label": "Banyalbufar"
+ },
+ {
+  "value": "9065",
+  "label": "Biniali"
+ },
+ {
+  "value": "9285",
+  "label": "Biniamar"
+ },
+ {
+  "value": "9010",
+  "label": "Biniaraix"
+ },
+ {
+  "value": "9275",
+  "label": "Binissalem"
+ },
+ {
+  "value": "9225",
+  "label": "Buger"
+ },
+ {
+  "value": "9025",
+  "label": "Bunyola"
+ },
+ {
+  "value": "9270",
+  "label": "Bunyola, Orient"
+ },
+ {
+  "value": "9525",
+  "label": "C.Mallorca,P.Novo,P.Tropic."
+ },
+ {
+  "value": "9240",
+  "label": "Caimari"
+ },
+ {
+  "value": "9400",
+  "label": "Cala Bona"
+ },
+ {
+  "value": "9495",
+  "label": "Cala D´or"
+ },
+ {
+  "value": "9405",
+  "label": "Cala Millor, Sa Coma"
+ },
+ {
+  "value": "9520",
+  "label": "Cala Murada"
+ },
+ {
+  "value": "9110",
+  "label": "Calvia"
+ },
+ {
+  "value": "9220",
+  "label": "Campanet/Son paco"
+ },
+ {
+  "value": "9465",
+  "label": "Campos"
+ },
+ {
+  "value": "9450",
+  "label": "Can Pastilla, Las Maravillas"
+ },
+ {
+  "value": "9325",
+  "label": "Can Picafort, Playas de Muro"
+ },
+ {
+  "value": "9425",
+  "label": "Canyamel"
+ },
+ {
+  "value": "9420",
+  "label": "Capdepera 07580"
+ },
+ {
+  "value": "9430",
+  "label": "Capdepera 07590"
+ },
+ {
+  "value": "9120",
+  "label": "Cas Catala"
+ },
+ {
+  "value": "9030",
+  "label": "Caubet"
+ },
+ {
+  "value": "9045",
+  "label": "Centro Militar General Asensio"
+ },
+ {
+  "value": "9470",
+  "label": "Colonia De Sant Jordi"
+ },
+ {
+  "value": "9415",
+  "label": "Colonia De Sant Pere"
+ },
+ {
+  "value": "9260",
+  "label": "Consell"
+ },
+ {
+  "value": "9070",
+  "label": "Costitx"
+ },
+ {
+  "value": "9100",
+  "label": "Deya"
+ },
+ {
+  "value": "9155",
+  "label": "Es Capdella"
+ },
+ {
+  "value": "9530",
+  "label": "Es Llombards"
+ },
+ {
+  "value": "9125",
+  "label": "Esporles"
+ },
+ {
+  "value": "9135",
+  "label": "Estellencs"
+ },
+ {
+  "value": "9170",
+  "label": "Felanitx"
+ },
+ {
+  "value": "9020",
+  "label": "Fornalutx"
+ },
+ {
+  "value": "9215",
+  "label": "Inca"
+ },
+ {
+  "value": "9365",
+  "label": "Lloret De Vista Alegre"
+ },
+ {
+  "value": "9280",
+  "label": "Lloseta"
+ },
+ {
+  "value": "9310",
+  "label": "Llubi"
+ },
+ {
+  "value": "9455",
+  "label": "Llucmayor"
+ },
+ {
+  "value": "9350",
+  "label": "Manacor"
+ },
+ {
+  "value": "9230",
+  "label": "Mancor De La Vall"
+ },
+ {
+  "value": "9370",
+  "label": "Maria De La Salut"
+ },
+ {
+  "value": "9055",
+  "label": "Marratxi"
+ },
+ {
+  "value": "9195",
+  "label": "Montuiri"
+ },
+ {
+  "value": "9315",
+  "label": "Muro"
+ },
+ {
+  "value": "9000",
+  "label": "Palma Ciudad y Alrededores (07000-07015)"
+ },
+ {
+  "value": "9140",
+  "label": "Palmanyola"
+ },
+ {
+  "value": "9040",
+  "label": "Parc Bit"
+ },
+ {
+  "value": "9090",
+  "label": "Peguera"
+ },
+ {
+  "value": "9375",
+  "label": "Petra"
+ },
+ {
+  "value": "9295",
+  "label": "Platja De Alcudia, Urbanitzacio"
+ },
+ {
+  "value": "9335",
+  "label": "Pollença"
+ },
+ {
+  "value": "9340",
+  "label": "Pollença, Encinares"
+ },
+ {
+  "value": "9440",
+  "label": "Porcincula"
+ },
+ {
+  "value": "9210",
+  "label": "Porreres"
+ },
+ {
+  "value": "9080",
+  "label": "Port D Andratx"
+ },
+ {
+  "value": "9345",
+  "label": "Port De Pollença"
+ },
+ {
+  "value": "9015",
+  "label": "Port De Soller"
+ },
+ {
+  "value": "9505",
+  "label": "Portocolom"
+ },
+ {
+  "value": "9510",
+  "label": "Portocristo"
+ },
+ {
+  "value": "9300",
+  "label": "Puerto De Alcudia"
+ },
+ {
+  "value": "9150",
+  "label": "Puigpunyent"
+ },
+ {
+  "value": "9145",
+  "label": "Puigpunyent, Galilea"
+ },
+ {
+  "value": "9460",
+  "label": "Randa, San Honorato"
+ },
+ {
+  "value": "9190",
+  "label": "Ruberts-Pina"
+ },
+ {
+  "value": "9435",
+  "label": "S arenal, Pitlari, Ses Cadenes"
+ },
+ {
+  "value": "9515",
+  "label": "S illot Cala Morlanda"
+ },
+ {
+  "value": "9500",
+  "label": "S´horta Calonge"
+ },
+ {
+  "value": "9165",
+  "label": "Sa Casa Blanca"
+ },
+ {
+  "value": "9035",
+  "label": "Sa Garriga, Son Sardina"
+ },
+ {
+  "value": "9305",
+  "label": "Sa Pobla"
+ },
+ {
+  "value": "9475",
+  "label": "Sa Rapita"
+ },
+ {
+  "value": "9490",
+  "label": "Sa Torre Nova"
+ },
+ {
+  "value": "9085",
+  "label": "Sant Elm"
+ },
+ {
+  "value": "9200",
+  "label": "Sant Joan"
+ },
+ {
+  "value": "9385",
+  "label": "Sant Llorenç des Cardassar"
+ },
+ {
+  "value": "9320",
+  "label": "Santa Margarita"
+ },
+ {
+  "value": "9255",
+  "label": "Santa Maria Del Cami"
+ },
+ {
+  "value": "9105",
+  "label": "Santa Ponça"
+ },
+ {
+  "value": "9485",
+  "label": "Santanyi"
+ },
+ {
+  "value": "9245",
+  "label": "Santuario De Lluch"
+ },
+ {
+  "value": "9235",
+  "label": "Selva"
+ },
+ {
+  "value": "9050",
+  "label": "Sencelles"
+ },
+ {
+  "value": "9115",
+  "label": "Ses Illetes"
+ },
+ {
+  "value": "9480",
+  "label": "Ses Salines"
+ },
+ {
+  "value": "9360",
+  "label": "Sineu"
+ },
+ {
+  "value": "9250",
+  "label": "Sol Aires De Montanya"
+ },
+ {
+  "value": "9005",
+  "label": "Soller"
+ },
+ {
+  "value": "9390",
+  "label": "Son Carrio"
+ },
+ {
+  "value": "9160",
+  "label": "Son Ferriol"
+ },
+ {
+  "value": "9355",
+  "label": "Son Macia"
+ },
+ {
+  "value": "9175",
+  "label": "Son Negre,Carritxo,Cas Concos"
+ },
+ {
+  "value": "9330",
+  "label": "Son Serra De Marina"
+ },
+ {
+  "value": "9395",
+  "label": "Son Servera"
+ },
+ {
+  "value": "9180",
+  "label": "Son Valls,Mesquida,Mayoll,Cald"
+ },
+ {
+  "value": "9445",
+  "label": "Son Veri Nou Llucmayor"
+ },
+ {
+  "value": "9060",
+  "label": "Sta. Eugenia"
+ },
+ {
+  "value": "9095",
+  "label": "Valldemosa"
+ },
+ {
+  "value": "5085",
+  "label": "Ventura Inca"
+ },
+ {
+  "value": "9205",
+  "label": "Vilafranca De Bonany"
+ }
+]

@@ -1,0 +1,27 @@
+{
+  "name": "cesta-mallorca",
+  "private": true,
+  "version": "0.0.0",
+  "description": "PWA que compara la compra online de supermercado en Mallorca con el envío incluido.",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "verify-stores": "tsx scripts/verify-stores.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "playwright": "^1.56.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
