@@ -1,124 +1,76 @@
-# SPEC — Cesta Mallorca
+# SPEC — Cesta Mallorca (versión simple)
 
-Especificación final del proyecto. Parte del *Prompt Maestro* e incorpora las decisiones tomadas con el usuario (22/10/2026) y lo verificado en la Fase 0 (`docs/TIENDAS.md`).
+Especificación vigente desde el 22/10/2026. El usuario pidió simplificar: **solo iPhone, 3 tiendas y nada que instalar**.
+El Prompt Maestro original queda como referencia de ideas para más adelante; donde choque con este documento, manda este documento. El estado real de cada tienda está en `docs/TIENDAS.md`, que manda sobre los dos.
 
-**En caso de conflicto, el orden de prioridad es:**
-1. `docs/TIENDAS.md` (lo verificado).
-2. Este documento.
-3. El Prompt Maestro.
+## 1. Qué hace la app
+Una PWA para el iPhone que:
+1. A partir del perfil de la familia (personas, edades, dirección en Mallorca), **genera la lista de la compra**.
+2. Busca cada producto en **Mercadona, Alcampo e Hiper Centro** con los precios reales para esa dirección.
+3. Calcula el **total con el envío incluido** en cada tienda (y la mejor combinación de dos, si ahorra lo suficiente).
+4. Devuelve la lista final de la tienda ganadora, **con un enlace a cada producto**. El usuario los añade al carrito y paga en la web o app de la tienda.
 
-## 1. Objetivo
-Web app que, a partir del perfil de una familia en Mallorca:
-1. Genera su lista de la compra.
-2. Consulta los supermercados online que reparten en su dirección.
-3. Compara precios reales y recomienda **la compra más barata con el envío incluido**.
-4. Rellena el carrito en la tienda elegida. El usuario solo revisa y paga en la web o app de la tienda.
+No hay login en las tiendas, no se rellena el carrito automáticamente y no hay que instalar nada en el ordenador.
 
-El valor diferencial es: **cesta familiar + cobertura real en Mallorca + coste total con envío + carrito listo**.
-
-## 2. Decisiones de producto y arquitectura
+## 2. Decisiones
 | Tema | Decisión |
 |---|---|
-| Cliente | **PWA para iPhone** (Safari → "Añadir a pantalla de inicio"), móvil primero, en español. Sin App Store. |
-| Servidor | **En la nube desde la Fase 1**: Railway (servicio web + servicio worker con Chromium + Postgres). |
-| Tiendas que bloquean la nube | El worker está desacoplado: pide trabajos a la API por HTTPS (`WORKER_TOKEN`) y puede ejecutarse en la nube **o en el Mac de casa** (IP doméstica). Cada tienda tiene `affinity: cloud \| home` (`packages/core/src/stores.ts`). Si el worker de casa está apagado, la tienda aparece "no disponible ahora". |
-| BD | **Postgres desde el inicio** con Prisma (sin paso por SQLite). Todas las tablas con `userId`. |
-| Login de la app | Email + contraseña (argon2), cookie de sesión httpOnly. El enlace mágico queda para la Fase 4. |
-| Login en tiendas | **Navegador remoto dentro de la PWA** (Fase 2): el worker abre la página de login con Playwright, emite la pantalla por CDP `Page.startScreencast` sobre WebSocket y reenvía toques y teclado. El usuario escribe sus credenciales y resuelve CAPTCHA/2FA. Se guarda el `storageState` cifrado (AES-256-GCM). |
-| Bóveda de credenciales | Opcional y **desactivada por defecto** (`VAULT_ENABLED`). AES-256-GCM con clave derivada (scrypt) de una contraseña maestra; la clave solo vive en la memoria del worker. Se desactiva antes de comercializar. |
-| Emparejado | Heurística determinista + confirmación del usuario. Sin IA. |
-| CP de prueba | 07009, 07300 y **07360 (Lloseta, CP del perfil)**. |
-| Mac del usuario | macOS. Ejecuta `verify-stores` y el worker de casa. |
+| Cliente | PWA para iPhone (Safari → "Añadir a pantalla de inicio"), en español, móvil primero. |
+| Servidor | **Vercel** (cuenta ya conectada; despliega Claude). Next.js con funciones de servidor. Nada en el Mac. |
+| Tiendas | **Mercadona, Alcampo e Hiper Centro**: las tres reparten en 07009, 07300 y 07360 y responden desde la nube. Carrefour, Eroski y El Corte Inglés quedan **fuera de momento** (bloquean servidores en la nube). Lidl y Aldi no venden la compra básica online. |
+| Datos del usuario | Perfil y listas se guardan **en el propio iPhone** (almacenamiento local de la PWA). Sin cuentas ni base de datos en esta versión. |
+| Acceso | La app se protege con **una contraseña sencilla** (variable de entorno en Vercel) para que nadie más use la URL. |
+| Emparejado | Heurística determinista; el usuario puede corregir un emparejado y la corrección se recuerda en el iPhone. Sin IA. |
+| Datos | Ningún precio, envío ni cobertura sin fuente y fecha. Si falta: "sin dato". |
 
-## 3. Tiendas
-El estado real está en `docs/TIENDAS.md`. Resumen a 22/10/2026:
-- **Activas para la cesta**: Mercadona, Carrefour, Alcampo, Eroski, El Corte Inglés/Hipercor e Hiper Centro.
-  - Carrefour, Eroski y ECI tienen `affinity: home`.
-- **Referencia (folleto)**: Lidl (`solo_bazar`) y Aldi (`sin_online`).
-
-Registro en BD por tienda: `nombre, url, activa, tipo (online_alimentacion | solo_bazar | sin_online), requiere_login, affinity, notas`.
-
-Particularidades verificadas que el modelo debe soportar:
-- **Mercadona**: precios por almacén (el CP determina el almacén).
-- **Alcampo**: cobertura por dirección geocodificada; hace falta la dirección completa.
-- **Hiper Centro**: cobertura por población, no por CP; pago a la entrega; login con móvil + PIN.
+## 3. Tiendas (resumen; detalle en `docs/TIENDAS.md`)
+| Tienda | Cómo se consulta | Envío | Mínimo | Cobertura |
+|---|---|---|---|---|
+| Mercadona | API pública de la web: el CP da el almacén y la búsqueda (Algolia pública) da precios por almacén | 8,20 € (oficial) | 60 € (oficial) | Por CP |
+| Alcampo | Un navegador ligero en Vercel fija la región a partir de la dirección (una vez); luego los precios se leen del HTML de su búsqueda | 7,00 € día siguiente / 9,90 € mismo día (oficial) | Sin mínimo | Por dirección |
+| Hiper Centro | Su web (población de entrega → catálogo) | 6,95 € (en vivo) | Sin mínimo | Por población |
 
 ## 4. Pantallas
-- **P1 Login de la app**: email + contraseña. Preparado para multiusuario.
-- **P2 Perfil familiar** (obligatorio antes de comprar):
-  - Personas, con el rango de edad de cada una: 0–3, 4–11, 12–17, adulto, +65.
-  - **Dirección completa** (calle, número, CP, población).
-  - Marca blanca / de fabricante / indiferente.
-  - Restricciones: sin gluten, sin lactosa, vegetariano, halal…
-  - Mascotas.
-  - Frecuencia: semanal o quincenal.
-  - Presupuesto orientativo (opcional).
-  - Franja preferida: mañana, tarde o sábado.
-  - Con todo esto se calcula el perfil de consumo (§6).
-- **P3 Tiendas**:
-  - Estado de cada tienda para la dirección: ✅ reparte · ⚠️ solo recogida · ❌ no reparte · 🛍️ solo bazar · ❔ sin dato (con fecha y motivo).
-  - Selección de en qué tiendas buscar.
-  - "Conectar cuenta" (navegador remoto) y estado de la sesión: conectada, caducada o sin cuenta.
-  - Indicador de si el worker de casa está en línea.
-- **P4 Lista de la compra**:
-  - Cesta base generada automáticamente, agrupada por categorías.
-  - Editar cantidades, quitar productos, fijar una marca concreta y añadir productos libres con buscador.
-  - Guardar listas y repetir la última compra.
-- **P5 Comparativa y recomendación**:
-  - Tabla producto × tienda: precio, €/kg o €/L, oferta, disponibilidad y antigüedad del precio.
-  - Totales por tienda: subtotal + envío − descuentos.
-  - Tres recomendaciones: mejor tienda única, mejor par y ofertas que merecen la pena.
-  - Avisos: no encontrados, sustituciones, mínimo no alcanzado ("te faltan X €"), datos "sin dato" o desactualizados.
-- **P6 Carrito**:
-  - "Enviar al carrito de [tienda]" con la sesión del usuario.
-  - Informe: añadidos ✅, sin stock ❌, sustituidos 🔁.
-  - Termina con el enlace para abrir el carrito en la web o app de la tienda. **El pago y la confirmación los hace siempre el usuario.**
-- **P7 Historial**: compras, gasto por tienda y por mes, y ahorro estimado frente a la opción más cara.
+1. **Inicio / contraseña**: se pide la contraseña la primera vez y se recuerda en el iPhone.
+2. **Perfil**:
+   - Personas y rango de edad de cada una: 0–3, 4–11, 12–17, adulto, +65.
+   - Dirección (calle, número, CP, población).
+   - Marca blanca / de fabricante / indiferente.
+   - Restricciones: sin gluten, sin lactosa, vegetariano, halal.
+   - Mascotas.
+   - Frecuencia: semanal o quincenal.
+3. **Lista**:
+   - Cesta base generada a partir del perfil, agrupada por categorías.
+   - Cambiar cantidades, quitar productos, fijar una marca y añadir productos libres ("Cola Cao 760 g").
+   - Guardar la lista y repetir la última.
+4. **Comparar**:
+   - Barra de progreso.
+   - Por tienda: subtotal + envío = **total real**; aviso si no llega al mínimo ("te faltan X €").
+   - Recomendación: mejor tienda única y, si compensa, mejor par.
+   - Tabla por producto: precio, €/kg o €/L, oferta y el producto elegido en cada tienda (con opción de cambiarlo).
+   - Avisos de no encontrados.
+5. **Lista final**: productos de la tienda (o tiendas) recomendada, con cantidad, precio y **enlace a cada producto**. Botón "Copiar lista".
 
 ## 5. Arquitectura
 ```
-apps/web            Next.js (App Router) + TS + Tailwind · PWA (manifest, iconos, safe areas de iOS)
-apps/worker         Node + Playwright · consume la cola vía HTTPS · navegador remoto (WS)
+apps/web            Next.js (App Router) + TS + Tailwind · PWA · rutas API que llaman a los conectores
 packages/core       tipos, tiendas, normalizador, emparejador, optimizador, cesta base (puro, sin E/S)
-packages/connectors un conector por tienda + shared/ (navegador, bloqueos, ritmo, http) + fixtures + tests
-packages/db         Prisma (Postgres) · schema · seed
-scripts/            verify-stores.ts
-docs/               TIENDAS.md · FRAGILIDAD.md · verificacion/*.json · CHECKLIST_COMERCIAL.md (Fase 4)
+packages/connectors un conector por tienda + shared/ + fixtures + tests
+scripts/            verify-stores.ts (verificación en vivo, la ejecuta Claude)
+docs/               TIENDAS.md · FRAGILIDAD.md · verificacion/*.json
 ```
-
-### Contrato de conector (`packages/core/src/types.ts`)
-```ts
-interface StoreConnector {
-  id: StoreId;
-  checkCoverage(ctx: DeliveryContext): Promise<Coverage>;        // DeliveryContext = { cp, address?, town? }
-  getDeliveryTerms(ctx: DeliveryContext): Promise<DeliveryTerms>;
-  sessionStatus(): Promise<'ok' | 'expired' | 'none'>;
-  openAssistedLogin(): Promise<void>;                            // navegador remoto
-  search(query: string, opts?): Promise<ProductOffer[]>;
-  getProduct(ref: string): Promise<ProductOffer>;
-  addToCart(items: CartItem[]): Promise<CartReport>;
-}
-```
-- Cambio respecto al Prompt Maestro: recibe `DeliveryContext` en lugar de solo `cp`, porque Alcampo necesita la dirección e Hiper Centro la población.
-- Todo `Coverage` y `DeliveryTerms` lleva `source` (`live` | `official_doc` | `none`), `checkedAt` y evidencia. Si hay bloqueo, `blockedBy`.
+- Contrato de conector (`packages/core/src/types.ts`), recortado a lo necesario: `checkCoverage(ctx)`, `getDeliveryTerms(ctx)` y `search(query)`. `ctx = { cp, address?, town? }`.
 - Fuente de datos por prioridad:
-  1. API JSON pública que usa la propia web (Mercadona: `change-pc` y búsqueda Algolia pública; Alcampo: `/api/...`).
-  2. HTML renderizado.
-  3. **Nunca** saltarse protecciones.
-- Caché de precios con `fetched_at`. Un precio de más de 7 días se marca "desactualizado".
-- Ritmo humano: `Pacer` por tienda (una petición cada vez, pausas de 1,5–4 s, `STORE_MAX_REQ_PER_MIN`), reintentos con backoff ante errores 5xx o de red.
+  1. API pública que usa la propia web.
+  2. HTML.
+  3. Navegador ligero solo cuando la web lo exige (Alcampo, para fijar la región).
+  4. **Nunca** saltarse protecciones.
+- Ritmo humano: `Pacer` por tienda (una petición cada vez, pausas de 1,5–4 s, máx. 20 por minuto). Las tres tiendas se consultan en paralelo entre sí, pero cada una a ritmo humano.
+- Una comparación se divide en lotes cortos de productos para no superar el tiempo máximo de las funciones de Vercel; la PWA va pidiendo lotes y muestra el progreso.
+- Caché de precios en el servidor (en memoria o la caché de datos de Vercel) con `fetchedAt`. Un precio de más de 7 días se marca "desactualizado".
 
-### Cola y workers
-- Tabla `Job` (tipo, tienda, payload, estado, intentos, `lockedBy`, `lockedUntil`, resultado).
-- Los workers llaman a `POST /api/worker/claim` con su `affinity` y devuelven el resultado por `POST /api/worker/complete`.
-- La web enseña el progreso de una comparación con sondeo corto o SSE.
-
-### Recolección de precios
-- **Bajo demanda** al pulsar "Comparar": solo los artículos de la lista, en las tiendas elegidas.
-- **Programada** (Fase 3): refresco semanal de la cesta base.
-
-## 6. Cesta base y perfil de consumo
-Factores por rango de edad (editables):
+## 6. Cesta base y consumo
+Factores por rango de edad:
 
 | Rango | Factor |
 |---|---|
@@ -127,78 +79,46 @@ Factores por rango de edad (editables):
 | 4–11 | 0,7 |
 | 0–3 | 0,4 + categoría Bebé |
 
-**Unidades de consumo (UC)** = suma de factores. Cantidad semanal = UC × cantidad base, redondeada al formato comercial más cercano. En compra quincenal se multiplica por 2.
+UC = suma de factores. Cantidad semanal = UC × cantidad base, redondeada al formato comercial. Si la compra es quincenal, ×2.
 
-Cantidades base semanales por UC (editables):
+Cantidades base semanales por UC:
 - Lácteos y huevos: leche 2,5 L · yogures 5 ud · huevos 6 ud · queso 150 g.
 - Pan y desayuno: pan 1 kg · cereales/galletas 250 g.
 - Despensa: pasta 300 g · arroz 300 g · legumbres 250 g · aceite de oliva 0,25 L · tomate triturado 400 g.
-- Fruta y verdura: fruta 2 kg · verdura y hortalizas 2 kg · patatas 1 kg.
+- Fruta y verdura: fruta 2 kg · verdura 2 kg · patatas 1 kg.
 - Carne y pescado: pollo 400 g · carne roja/cerdo 300 g · pescado 350 g · embutido 100 g.
 - Bebidas: agua 6 L · zumo 0,5 L.
-- Limpieza e higiene: cantidades por hogar (no por UC), con reposición quincenal o mensual.
+- Limpieza e higiene: cantidades por hogar.
 
-Categorías y genéricos de la cesta base (~90): los de la §6 del Prompt Maestro. El Asesor los activa según el perfil:
-- Bebé, si hay alguien de 0–3.
-- Mascotas, si las hay.
-- Cerveza, si hay adultos.
-- Restricciones: sin gluten, sin lactosa, vegetariano, halal.
+Categorías y genéricos (~80–100), activados según el perfil:
+- Lácteos y huevos · panadería y desayuno · despensa · conservas y salsas · aceites y condimentos.
+- Fruta y verdura · carne y pescado · congelados · bebidas (cerveza si hay adultos).
+- Limpieza · higiene.
+- Bebé (si hay alguien de 0–3) · mascotas (si las hay).
 
-## 7. Optimización, ofertas y fidelización
-- `total = Σ(precio_elegido × unidades) + envío(subtotal, dirección, franja) − descuentos_aplicables`.
-- Si el subtotal no llega al pedido mínimo, la tienda queda "no válida" con el importe que falta.
-- **Envío "sin dato"**: la tienda se muestra, pero no puede ganar una recomendación sin un aviso destacado. Nunca se asume 0 €.
-- Productos no encontrados: se penalizan con el precio medio de las demás tiendas y se marcan.
-- Combinaciones: se evalúan por fuerza bruta todas las tiendas individuales y todos los pares.
-  - Un par solo se recomienda si `ahorro_vs_mejor_individual > envío_extra + umbral` (umbral de 5 € por defecto).
+## 7. Cálculo
+- `total = Σ(precio × unidades) + envío`.
+- Si no llega al pedido mínimo, la tienda queda "no válida" con lo que falta.
+- **Envío "sin dato"**: la tienda no puede salir recomendada sin un aviso destacado. Nunca se asume 0 €.
+- No encontrados: se penalizan con el precio medio de las demás tiendas y se marcan.
+- Emparejado: el producto equivalente más barato **por precio unitario**, con formato entre 0,5× y 2× de lo necesario y respetando la preferencia de marca.
+- Pares: se evalúan todos (son 3).
+  - Se recomienda un par solo si `ahorro > envío extra + 5 €` (umbral configurable).
   - Nunca más de 2 tiendas.
-- Ofertas: 2x1, 3x2, 2ª unidad al X %, descuento directo y precio rebajado, calculando su precio unitario efectivo.
-  - Solo se proponen si la cantidad obligada es ≤ 2× la necesidad y el producto no es perecedero (o se consume en el periodo).
-  - Son sugerencias opcionales con el ahorro en €; nunca se añaden sin aceptación.
-- Fidelización:
-  - **Fase 1–3**: avisos informativos (Club Carrefour, EROSKI club / tarjeta EROSKI, Tarjeta ECI, Club Alcampo).
-  - **Fase 4**: reglas modelables (envío gratis desde X €) si el usuario declara sus tarjetas.
+- Ofertas (fase posterior): 2x1, 3x2, 2ª unidad al X %, como sugerencia opcional con el ahorro en €.
 
-## 8. Login y registro en tiendas
-- **Modo por defecto: navegador remoto + sesión persistente cifrada.**
-  - Cuando la sesión caduca, la app avisa: "Sesión de X caducada — reconectar".
-  - Fase 3: aviso por Web Push en la PWA instalada (iOS 16.4+).
-- **Bóveda opcional**: ver §2.
-- **Registro asistido**: el navegador remoto abre el registro y la app rellena los campos con los datos del perfil. El usuario revisa, acepta las condiciones, resuelve el CAPTCHA y pulsa "Crear cuenta".
-- **Límites fijos**:
-  - No se resuelven ni automatizan CAPTCHAs ni sistemas anti-bot.
-  - No se completan pagos.
-  - No se aceptan condiciones por el usuario.
+## 8. Seguridad
+Ver `CLAUDE.md`. En resumen:
+- Sin CAPTCHAs ni protecciones esquivadas.
+- Sin pagos.
+- Secretos solo en variables de entorno.
+- La dirección del usuario solo viaja en la petición de comparación y no se registra en logs.
 
-## 9. Seguridad
-Ver la sección "Reglas de seguridad" de `CLAUDE.md`. Antes de la Fase 4, `docs/CHECKLIST_COMERCIAL.md` debe cubrir:
-- RGPD.
-- Condiciones de uso de cada tienda respecto a la automatización.
-- Política de privacidad.
-- Valoración de acuerdos, afiliación o APIs oficiales.
-
-## 10. Modelo de datos (mínimo)
-- `User`
-- `FamilyProfile` (con dirección, CP y población) y `FamilyMember`.
-- `Store` (con `affinity`), `StoreCoverage(userId, storeId, cp, address_hash, status, source, checkedAt, evidence)` y `DeliveryTerms`.
-- `StoreSession(encryptedState)`.
-- `Product` (genérico), `StoreProduct(precio, precio_unitario, oferta, fetched_at, warehouse/region)` y `ProductMatch(confirmado_por_usuario)`.
-- `ShoppingList` y `ShoppingListItem`.
-- `Comparison` y `ComparisonResult`.
-- `Order` (historial) y `Job`.
-
-## 11. Fases y criterios de aceptación
+## 9. Fases
 | Fase | Alcance | ✅ Hecho cuando |
 |---|---|---|
-| **0** | Andamiaje, `verify-stores`, `docs/TIENDAS.md`, `CLAUDE.md`, `SPEC.md` | Cada tienda tiene estado y condiciones de envío verificadas, o "sin dato" justificado, para 07009, 07300 y 07360. Queda pendiente la pasada desde el Mac para Carrefour, Eroski y ECI. |
-| **1** | `core` completo (normalizador, emparejador, optimizador, cesta base), Prisma + seed, P1, P2, P4 y P5, conectores de Mercadona (nube) y Carrefour (casa), cola y workers, Dockerfiles, despliegue en Railway | Una lista de 30 productos se compara en menos de 3 min desde el iPhone, con €/kg y total con envío. |
-| **2** | Conectores de Alcampo, Eroski, ECI e Hiper Centro; P3 completa; navegador remoto; registro asistido; bóveda opcional; P6 `addToCart` | El carrito de la tienda recomendada queda relleno y el informe cuadra con la web. |
-| **3** | Ofertas, fidelización informativa, P7, refresco programado, Web Push, folletos de Lidl y Aldi | — |
-| **4** | Multiusuario real, enlace mágico, checklist comercial, desactivar la bóveda | — |
-
-## 12. Entregables
-- `README.md`: instalación paso a paso, no técnica, para macOS y Railway.
-- `SPEC.md`, `CLAUDE.md` y `docs/TIENDAS.md`.
-- Comandos: `npm run dev`, `npm run worker`, `npm run worker:home`, `npm test`, `npm run seed` y `npm run verify-stores`.
-- Fixtures por tienda (`packages/connectors/fixtures/`), para que los tests no dependan de internet.
-- Al cerrar cada fase, `docs/FRAGILIDAD.md`: qué se rompe con más facilidad y cómo detectarlo.
+| **0** ✅ | Verificación de tiendas, `TIENDAS.md`, `SPEC.md`, `CLAUDE.md` | Hecho el 22/10/2026 |
+| **1** | Lógica (`core`: cesta base, normalizador, emparejador, optimizador) + conector de Mercadona + PWA (contraseña, perfil, lista, comparar, lista final) desplegada en Vercel | Desde el iPhone, una lista de 30 productos se compara en Mercadona en < 3 min, con €/kg y total con envío |
+| **2** | Conectores de Alcampo e Hiper Centro; comparativa de 3 tiendas y pares | La misma lista se compara en las 3 tiendas en < 3 min y la recomendación cuadra con las webs |
+| **3** | Ofertas, historial de compras, ajustes de cantidades base | — |
+| Más adelante (opcional) | Carrito automático, más tiendas, cuentas y base de datos, versión comercial | Se decide cuando la versión simple esté en uso |

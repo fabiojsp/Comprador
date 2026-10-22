@@ -1,4 +1,4 @@
-import type { StoreId, StoreKind, WorkerAffinity } from './types.js';
+import type { StoreId, StoreKind } from './types.js';
 
 export interface StoreInfo {
   id: StoreId;
@@ -8,8 +8,6 @@ export interface StoreInfo {
   /** Activa por defecto en la app. */
   active: boolean;
   requiresLogin: boolean;
-  /** Dónde se ejecuta el conector. Decidido con los datos de docs/TIENDAS.md. */
-  affinity: WorkerAffinity;
   notes: string;
 }
 
@@ -22,7 +20,6 @@ export const STORES: Record<StoreId, StoreInfo> = {
     kind: 'online_alimentacion',
     active: true,
     requiresLogin: false,
-    affinity: 'cloud',
     notes: 'Cobertura y precios por almacén según CP. Búsqueda pública sin login.',
   },
   carrefour: {
@@ -30,10 +27,9 @@ export const STORES: Record<StoreId, StoreInfo> = {
     name: 'Carrefour',
     url: 'https://www.carrefour.es/supermercado',
     kind: 'online_alimentacion',
-    active: true,
+    active: false,
     requiresLogin: false,
-    affinity: 'home',
-    notes: 'Cloudflare bloquea IPs de centro de datos (403). Pendiente de verificar desde el Mac.',
+    notes: 'Fuera de alcance por ahora: Cloudflare bloquea servidores en la nube (403).',
   },
   alcampo: {
     id: 'alcampo',
@@ -42,7 +38,6 @@ export const STORES: Record<StoreId, StoreInfo> = {
     kind: 'online_alimentacion',
     active: true,
     requiresLogin: false,
-    affinity: 'cloud',
     notes: 'La cobertura se resuelve por dirección geocodificada, no solo por CP. Domicilio y recogida.',
   },
   eroski: {
@@ -50,20 +45,18 @@ export const STORES: Record<StoreId, StoreInfo> = {
     name: 'Eroski',
     url: 'https://supermercado.eroski.es',
     kind: 'online_alimentacion',
-    active: true,
+    active: false,
     requiresLogin: false,
-    affinity: 'home',
-    notes: 'Comprobación reCAPTCHA del navegador desde IP de centro de datos. Pendiente de verificar desde el Mac.',
+    notes: 'Fuera de alcance por ahora: comprobación reCAPTCHA desde servidores en la nube.',
   },
   eci: {
     id: 'eci',
     name: 'El Corte Inglés / Hipercor',
     url: 'https://www.elcorteingles.es/supermercado/',
     kind: 'online_alimentacion',
-    active: true,
+    active: false,
     requiresLogin: false,
-    affinity: 'home',
-    notes: 'Akamai devuelve "Access Denied" a IPs de centro de datos. Pendiente de verificar desde el Mac.',
+    notes: 'Fuera de alcance por ahora: Akamai devuelve "Access Denied" a servidores en la nube.',
   },
   hipercentro: {
     id: 'hipercentro',
@@ -72,7 +65,6 @@ export const STORES: Record<StoreId, StoreInfo> = {
     kind: 'online_alimentacion',
     active: true,
     requiresLogin: false,
-    affinity: 'cloud',
     notes: 'Cadena balear (Hiper Manacor S.L.). Cobertura por población, no por CP. Login con móvil + PIN.',
   },
   lidl: {
@@ -82,7 +74,6 @@ export const STORES: Record<StoreId, StoreInfo> = {
     kind: 'solo_bazar',
     active: false,
     requiresLogin: false,
-    affinity: 'cloud',
     notes: 'La tienda online no vende alimentación. Solo folleto como referencia.',
   },
   aldi: {
@@ -92,7 +83,6 @@ export const STORES: Record<StoreId, StoreInfo> = {
     kind: 'sin_online',
     active: false,
     requiresLogin: false,
-    affinity: 'cloud',
     notes: 'Sin compra online. Folleto por región (Baleares) como referencia.',
   },
 };

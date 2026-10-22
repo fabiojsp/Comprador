@@ -4,7 +4,7 @@ Este documento **manda** sobre la tabla del Prompt Maestro. Fecha de la verifica
 CP de prueba: **07009** (Palma), **07300** (Inca), **07360** (Lloseta, CP del perfil).
 
 Cómo leerlo:
-- **Verificación automática**: la genera `npm run verify-stores` en cada red donde se ejecuta. Hay un bloque por red (nube, Mac de casa…).
+- **Verificación automática**: la genera `npm run verify-stores` en cada red donde se ejecuta. Hay un bloque por red.
 - **Ficha por tienda**: lo verificado a mano, con fuente, fecha y tipo de fuente:
   - **en vivo**: leído de la web o la API de la tienda.
   - **oficial**: página de ayuda o condiciones de la tienda.
@@ -14,28 +14,32 @@ Cómo leerlo:
 
 ## Resumen y decisiones
 
-| Tienda | Tipo | Reparte 07009 / 07300 / 07360 | Envío | Pedido mín. | Gratis desde | Worker | Activa |
-|---|---|---|---|---|---|---|---|
-| Mercadona | online_alimentacion | ✅ / ✅ / ✅ (en vivo) | 8,20 € (oficial) | 60 € (oficial) | sin dato | nube | Sí (Fase 1) |
-| Carrefour | online_alimentacion | ❔ sin dato (Cloudflare) | sin dato | sin dato | sin dato | **casa** | Sí (Fase 1) |
-| Alcampo | online_alimentacion | ✅ / ✅ / ✅ (en vivo) | 7,00 € tarifa Nacional (oficial) | sin mínimo (oficial) | sin dato | nube | Sí (Fase 2) |
-| Eroski | online_alimentacion | ❔ sin dato (reCAPTCHA) | sin dato | sin dato | sin dato | **casa** | Sí (Fase 2) |
-| El Corte Inglés / Hipercor | online_alimentacion | ❔ sin dato (Akamai) | sin dato | sin dato | sin dato | **casa** | Sí (Fase 2) |
-| Hiper Centro (TuHiper) | online_alimentacion | ✅ / ✅ / ✅ (en vivo) | 6,95 € (en vivo) | sin mínimo (en vivo) | sin dato | nube | Sí (Fase 2) |
-| Lidl | **solo_bazar** | 🛍️ sin compra básica online (en vivo) | — | — | — | — | No (folleto) |
-| Aldi | **sin_online** | — sin tienda online (en vivo) | — | — | — | — | No (folleto) |
+| Tienda | Tipo | Reparte 07009 / 07300 / 07360 | Envío | Pedido mín. | Gratis desde | En la app |
+|---|---|---|---|---|---|---|
+| Mercadona | online_alimentacion | ✅ / ✅ / ✅ (en vivo) | 8,20 € (oficial) | 60 € (oficial) | sin dato | **Sí** (Fase 1) |
+| Alcampo | online_alimentacion | ✅ / ✅ / ✅ (en vivo) | 7,00 € tarifa Nacional (oficial) | sin mínimo (oficial) | sin dato | **Sí** (Fase 2) |
+| Hiper Centro (TuHiper) | online_alimentacion | ✅ / ✅ / ✅ (en vivo) | 6,95 € (en vivo) | sin mínimo (en vivo) | sin dato | **Sí** (Fase 2) |
+| Carrefour | online_alimentacion | ❔ sin dato (Cloudflare) | sin dato | sin dato | sin dato | No, de momento |
+| Eroski | online_alimentacion | ❔ sin dato (reCAPTCHA) | sin dato | sin dato | sin dato | No, de momento |
+| El Corte Inglés / Hipercor | online_alimentacion | ❔ sin dato (Akamai) | sin dato | sin dato | sin dato | No, de momento |
+| Lidl | **solo_bazar** | 🛍️ sin compra básica online (en vivo) | — | — | — | No (folleto, más adelante) |
+| Aldi | **sin_online** | — sin tienda online (en vivo) | — | — | — | No (folleto, más adelante) |
 
-**Consecuencias para el plan**
+**Consecuencias para el plan (versión simple, ver `SPEC.md`)**
 
-1. **Carrefour (Fase 1), Eroski y El Corte Inglés** no se pueden leer desde una IP de centro de datos:
-   - Carrefour devuelve un desafío de Cloudflare (403).
+1. La app usa **Mercadona, Alcampo e Hiper Centro**: las tres reparten en los 3 CP de prueba y se pueden consultar desde la nube (Vercel).
+2. **Carrefour, Eroski y El Corte Inglés** bloquean los servidores en la nube:
+   - Carrefour devuelve un desafío de Cloudflare.
    - El Corte Inglés devuelve "Access Denied" de Akamai.
    - Eroski muestra una comprobación reCAPTCHA.
 
-   Sus conectores se ejecutan en el **worker de casa (Mac)**. Hay que repetir esta verificación desde el Mac: `npm run verify-stores -- --label "Mac casa"`.
-2. **Alcampo resuelve la cobertura por dirección geocodificada**, no solo por CP. El perfil debe guardar la dirección completa.
-3. **Hiper Centro reparte por población**, no por CP. El perfil guarda la población y el conector la busca en su lista. Palma de 07000 a 07015 aparece como "Palma Ciudad y Alrededores".
-4. **Lidl y Aldi** quedan desactivadas para la cesta. Solo sirven como referencia de folleto (Fase 3).
+   Quedan fuera de momento. `verify-stores` seguirá comprobando si eso cambia.
+3. **Alcampo**:
+   - Resuelve la cobertura por **dirección geocodificada**, no solo por CP. El perfil guarda la dirección completa.
+   - **Los precios dependen de la región**: con la región de Mallorca, una leche de la búsqueda sale a 9,54 € frente a 10,20 € en la región por defecto (Madrid).
+   - Para fijar la región, su protección AWS WAF exige un token que genera un navegador real. Se usa un navegador ligero solo para ese paso; después los precios se leen del HTML de la búsqueda con peticiones normales.
+4. **Hiper Centro** reparte por población, no por CP. Palma de 07000 a 07015 aparece como "Palma Ciudad y Alrededores".
+5. **Lidl y Aldi** no entran en la cesta.
 
 ## Verificación automática
 
@@ -61,22 +65,22 @@ _Generado por `npm run verify-stores` desde la red **Nube (IP de centro de datos
 - **Mercadona 07300** · delivers · API change-pc → 200, almacén 4781
 - **Mercadona 07360** · delivers · API change-pc → 200, almacén 4519
 - **Mercadona envío** · Fuentes: Coste de preparación (editado 2025-11-28); Pedido mínimo (editado 2026-02-10); Tramos disponibles y horarios de reparto (editado 2025-12-01). Coste igual para todos los CP con servicio según la FAQ. · https://ayuda.tienda.mercadona.es/hc/es/articles/360000857071-Coste-de-preparaci%C3%B3n
-- **Carrefour 07009** · unknown · HTTP 403 "Un momento…" · _Cloudflare (desafío anti-bot) desde esta red. Verificar con el worker de casa (Mac)._
-- **Carrefour 07300** · unknown · HTTP 403 "Un momento…" · _Cloudflare (desafío anti-bot) desde esta red. Verificar con el worker de casa (Mac)._
-- **Carrefour 07360** · unknown · HTTP 403 "Un momento…" · _Cloudflare (desafío anti-bot) desde esta red. Verificar con el worker de casa (Mac)._
-- **Carrefour envío** · Pendiente del conector completo (worker de casa).
+- **Carrefour 07009** · unknown · HTTP 403 "Un momento…" · _Cloudflare (desafío anti-bot) desde esta red._
+- **Carrefour 07300** · unknown · HTTP 403 "Un momento…" · _Cloudflare (desafío anti-bot) desde esta red._
+- **Carrefour 07360** · unknown · HTTP 403 "Un momento…" · _Cloudflare (desafío anti-bot) desde esta red._
+- **Carrefour envío** · Tienda fuera del alcance actual.
 - **Alcampo 07009** · delivers · deliverability=DELIVERABLE método=HOME_DELIVERY dirección="Carrer Gremi de Boneters, 52, Nord, 07009 Palma, Illes Balears, España"
 - **Alcampo 07300** · delivers · deliverability=DELIVERABLE método=HOME_DELIVERY dirección="Gran Via Colom, 218, 07300 Inca, Illes Balears, España"
 - **Alcampo 07360** · delivers · deliverability=DELIVERABLE método=HOME_DELIVERY dirección="Avinguda del Cocó, 2, 07360 Lloseta, Illes Balears, España"
 - **Alcampo envío** · Tarifa "Nacional" de la página oficial. La web avisa de que el coste varía según franja y día: el importe real se confirma al elegir franja. · https://www.compraonline.alcampo.es/content/servicios-entrega-recogida
-- **Eroski 07009** · unknown · HTTP 200 "Comprobando tu navegador - reCAPTCHA" · _Comprobación reCAPTCHA del navegador desde esta red. Verificar con el worker de casa (Mac)._
-- **Eroski 07300** · unknown · HTTP 200 "Comprobando tu navegador - reCAPTCHA" · _Comprobación reCAPTCHA del navegador desde esta red. Verificar con el worker de casa (Mac)._
-- **Eroski 07360** · unknown · HTTP 200 "Comprobando tu navegador - reCAPTCHA" · _Comprobación reCAPTCHA del navegador desde esta red. Verificar con el worker de casa (Mac)._
-- **Eroski envío** · Pendiente del conector completo (worker de casa).
-- **El Corte Inglés / Hipercor 07009** · unknown · HTTP 503 "Access Denied" · _Akamai ("Access Denied") desde esta red. Verificar con el worker de casa (Mac)._
-- **El Corte Inglés / Hipercor 07300** · unknown · HTTP 403 "Access Denied" · _Akamai ("Access Denied") desde esta red. Verificar con el worker de casa (Mac)._
-- **El Corte Inglés / Hipercor 07360** · unknown · HTTP 403 "Access Denied" · _Akamai ("Access Denied") desde esta red. Verificar con el worker de casa (Mac)._
-- **El Corte Inglés / Hipercor envío** · Pendiente del conector completo (worker de casa).
+- **Eroski 07009** · unknown · HTTP 200 "Comprobando tu navegador - reCAPTCHA" · _Comprobación reCAPTCHA del navegador desde esta red._
+- **Eroski 07300** · unknown · HTTP 200 "Comprobando tu navegador - reCAPTCHA" · _Comprobación reCAPTCHA del navegador desde esta red._
+- **Eroski 07360** · unknown · HTTP 200 "Comprobando tu navegador - reCAPTCHA" · _Comprobación reCAPTCHA del navegador desde esta red._
+- **Eroski envío** · Tienda fuera del alcance actual.
+- **El Corte Inglés / Hipercor 07009** · unknown · HTTP 503 "Access Denied" · _Akamai ("Access Denied") desde esta red._
+- **El Corte Inglés / Hipercor 07300** · unknown · HTTP 403 "Access Denied" · _Akamai ("Access Denied") desde esta red._
+- **El Corte Inglés / Hipercor 07360** · unknown · HTTP 403 "Access Denied" · _Akamai ("Access Denied") desde esta red._
+- **El Corte Inglés / Hipercor envío** · Tienda fuera del alcance actual.
 - **Hiper Centro (TuHiper) 07009** · delivers · Población "Palma Ciudad y Alrededores (07000-07015)" (id 9000) en el selector de entrega de Mallorca
 - **Hiper Centro (TuHiper) 07300** · delivers · Población "Inca" (id 9215) en el selector de entrega de Mallorca
 - **Hiper Centro (TuHiper) 07360** · delivers · Población "Lloseta" (id 9280) en el selector de entrega de Mallorca
@@ -125,7 +129,7 @@ _Generado por `npm run verify-stores` desde la red **Nube (IP de centro de datos
   - "gratis por compras superiores a 140€… 3,99€" (página regional de Andalucía).
   - Franjas de 2–3 h de 10:00 a 22:00.
   - Click & Collect.
-- **Pendiente**: ejecutar `verify-stores` desde el Mac. El conector de la Fase 1 implementará la cobertura por CP y las condiciones de envío leídas de la web.
+- **Fuera del alcance actual** (versión simple).
 - **Fidelización (informativo)**: Club Carrefour, sin efecto verificado sobre el envío.
 
 ### Alcampo — compraonline.alcampo.es
@@ -151,7 +155,7 @@ _Generado por `npm run verify-stores` desde la red **Nube (IP de centro de datos
   - "GRATIS si tu pedido supera los 140 €" pagando con tarjetas EROSKI.
   - Click&Drive gratis desde 30 €.
   - Click & Collect sin mínimo.
-  - No se usa aún: hay que confirmar la cobertura en Mallorca y el coste concreto desde el Mac.
+  - No se usa: tienda fuera del alcance actual.
 - **Fidelización (informativo)**: EROSKI club. El envío gratis va ligado a pagar con tarjeta EROSKI.
 
 ### El Corte Inglés / Hipercor — elcorteingles.es/supermercado
@@ -160,7 +164,7 @@ _Generado por `npm run verify-stores` desde la red **Nube (IP de centro de datos
   - Palma figura en la lista de gastos de envío.
   - "Gratis para compras superiores a 130€ o 110€ con la Tarjeta de compra"; 8 € por debajo de ese importe en Palma.
   - Inca y Lloseta: sin dato.
-- **Pendiente**: verificación desde el Mac.
+- **Fuera del alcance actual** (versión simple).
 - **Fidelización (informativo)**: Tarjeta El Corte Inglés y El Corte Inglés Plus. Pendiente de verificar.
 
 ### Hiper Centro — tuhiper.com (Hiper Manacor S.L.)
@@ -172,7 +176,7 @@ _Generado por `npm run verify-stores` desde la red **Nube (IP de centro de datos
 - **Envío (en vivo)**: "Gastos del Servicio Standard: 6,95€". Mismo importe en Palma, Inca y Lloseta.
 - **Pedido mínimo (en vivo)**: "Sin importe mínimo de compra".
 - **Plazo (en vivo)**: "en menos de 3 horas. A cualquier punto de la isla todos los días".
-- **Pago**: a la entrega, en efectivo o con tarjeta. **No se paga online.** Al llegar a la Fase 2 habrá que decidir qué significa "carrito listo" en esta tienda.
+- **Pago**: a la entrega, en efectivo o con tarjeta. **No se paga online.**
 - **Login**: no hace falta para ver precios ("Cliente Nuevo – Te registras al confirmar tu pedido"). El cliente registrado entra con **móvil + clave de 4 dígitos**.
 - **Web**: ASP.NET WebForms (postbacks). La búsqueda del catálogo no se lanza con Enter; se investiga en el conector de la Fase 2.
 - **Recogida**: hipercentro.com anuncia "la pots recollir a la botiga" (puedes recogerla en la tienda). Es oficial, pero no está verificado por población.

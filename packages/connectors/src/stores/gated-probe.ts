@@ -4,9 +4,9 @@ import { BLOCK_LABEL } from '../shared/block-detect.js';
 import { unknownTerms, type StoreProbe } from '../shared/probe.js';
 
 /**
- * Sondeo para tiendas cuya web bloquea IPs de centro de datos (Carrefour, Eroski, ECI).
- * Solo comprueba si la web es accesible desde la red actual. La cobertura por CP
- * la resuelve el conector completo (Fases 1–2) ejecutado en el worker de casa.
+ * Sondeo para tiendas cuya web bloquea servidores en la nube (Carrefour, Eroski, ECI).
+ * Solo comprueba si la web es accesible desde la red actual. Están fuera del alcance
+ * de la versión simple (SPEC.md); el sondeo sirve para detectar si eso cambia.
  */
 export function gatedProbe(id: StoreId, homeUrl: string): StoreProbe {
   return {
@@ -22,20 +22,20 @@ export function gatedProbe(id: StoreId, homeUrl: string): StoreProbe {
             storeId: id, cp: ctx.cp, status: 'unknown', source: 'none', checkedAt,
             blockedBy: open.blockedBy,
             evidence: `HTTP ${open.status ?? '—'} "${open.title}"`,
-            reason: `${BLOCK_LABEL[open.blockedBy]} desde esta red. Verificar con el worker de casa (Mac).`,
+            reason: `${BLOCK_LABEL[open.blockedBy]} desde esta red.`,
           };
         }
         return {
           storeId: id, cp: ctx.cp, status: 'unknown', source: 'none', checkedAt,
           evidence: `Web accesible desde esta red (HTTP ${open.status}, "${open.title}")`,
-          reason: 'Web accesible; la comprobación por CP llega con el conector completo.',
+          reason: 'Web accesible desde esta red: se podría reconsiderar incluir la tienda.',
         };
       } finally {
         await context.close();
       }
     },
     async getDeliveryTerms(ctx, env) {
-      return unknownTerms(id, ctx.cp, env.now().toISOString(), 'Pendiente del conector completo (worker de casa).');
+      return unknownTerms(id, ctx.cp, env.now().toISOString(), 'Tienda fuera del alcance actual.');
     },
   };
 }

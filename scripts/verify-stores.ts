@@ -4,7 +4,7 @@
  *   npm run verify-stores                      → los 3 CP de prueba, todas las tiendas
  *   npm run verify-stores -- --cp 07360        → un CP
  *   npm run verify-stores -- --store mercadona → una tienda
- *   npm run verify-stores -- --label "Mac casa" → etiqueta la red desde la que se ejecuta
+ *   npm run verify-stores -- --label nube      → etiqueta la red desde la que se ejecuta
  *
  * Escribe docs/verificacion/<red>.json y regenera el bloque automático de docs/TIENDAS.md.
  * Nunca resuelve CAPTCHAs ni esquiva protecciones: si una web bloquea, queda "sin dato".
@@ -135,7 +135,7 @@ async function main() {
   await writeFile(`docs/verificacion/${slug}.json`, JSON.stringify({ label, when, locations, results }, null, 2) + '\n');
 
   if (!values['no-doc']) {
-    // Un bloque por red (nube, Mac de casa…) para que una ejecución no pise a la otra.
+    // Un bloque por red para que una ejecución desde otra red no pise a la anterior.
     const START = `<!-- AUTO:${slug}:START -->`;
     const END = `<!-- AUTO:${slug}:END -->`;
     const doc = await readFile('docs/TIENDAS.md', 'utf8');

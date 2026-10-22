@@ -1,4 +1,4 @@
-// Tipos del dominio compartidos por web, worker y conectores.
+// Tipos del dominio compartidos por la web y los conectores.
 // Regla de oro: ningún precio, envío o cobertura sin `source` y fecha.
 
 export type StoreId =
@@ -12,9 +12,6 @@ export type StoreId =
   | 'aldi';
 
 export type StoreKind = 'online_alimentacion' | 'solo_bazar' | 'sin_online';
-
-/** Dónde puede ejecutarse el conector: la IP de centro de datos está bloqueada en algunas tiendas. */
-export type WorkerAffinity = 'cloud' | 'home';
 
 /** Origen de un dato. `none` = no se pudo obtener ("sin dato"). */
 export type DataSource = 'live' | 'official_doc' | 'none';
@@ -79,8 +76,6 @@ export interface DeliveryTerms {
   notes?: string;
 }
 
-export type SessionStatus = 'ok' | 'expired' | 'none';
-
 export type Unit = 'kg' | 'l' | 'ud';
 
 export interface PromoInfo {
@@ -112,20 +107,6 @@ export interface ProductOffer {
   fetchedAt: string;
 }
 
-export interface CartItem {
-  ref: string;
-  quantity: number;
-}
-
-export interface CartReport {
-  storeId: StoreId;
-  added: { ref: string; quantity: number }[];
-  outOfStock: { ref: string }[];
-  substituted: { ref: string; replacementRef: string }[];
-  cartUrl: string | null;
-  finishedAt: string;
-}
-
 export interface SearchOptions {
   limit?: number;
 }
@@ -137,13 +118,10 @@ export interface DeliveryContext {
   town?: string;
 }
 
+/** Versión simple: sin login ni carrito automático (ver SPEC.md). */
 export interface StoreConnector {
   id: StoreId;
   checkCoverage(ctx: DeliveryContext): Promise<Coverage>;
   getDeliveryTerms(ctx: DeliveryContext): Promise<DeliveryTerms>;
-  sessionStatus(): Promise<SessionStatus>;
-  openAssistedLogin(): Promise<void>;
-  search(query: string, opts?: SearchOptions): Promise<ProductOffer[]>;
-  getProduct(ref: string): Promise<ProductOffer>;
-  addToCart(items: CartItem[]): Promise<CartReport>;
+  search(ctx: DeliveryContext, query: string, opts?: SearchOptions): Promise<ProductOffer[]>;
 }

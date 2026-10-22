@@ -9,8 +9,7 @@ export interface BlockCheckInput {
 
 /**
  * Detecta páginas de protección anti-bot. Solo detecta: la app NUNCA intenta
- * resolver ni esquivar estas protecciones; la tienda queda "sin dato" o pasa
- * al worker de casa.
+ * resolver ni esquivar estas protecciones; la tienda queda "sin dato".
  */
 export function detectBlock({ status, title, body }: BlockCheckInput): BlockKind | null {
   const t = title.toLowerCase();

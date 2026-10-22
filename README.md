@@ -1,53 +1,22 @@
 # Cesta Mallorca
 
-Compara tu compra de supermercado online en Mallorca **con el envío incluido** y te deja el carrito listo en la tienda más barata. Tú solo revisas y pagas.
+Compara tu compra de supermercado en **Mercadona, Alcampo e Hiper Centro** con el envío incluido y te dice dónde sale más barata. Te da la lista final con un enlace a cada producto.
 
-> Estado: **Fase 0 terminada** (verificación de tiendas). La app (PWA para iPhone) llega en la Fase 1.
-> Qué tienda reparte dónde y cuánto cuesta el envío: [`docs/TIENDAS.md`](docs/TIENDAS.md).
+**Solo necesitas el iPhone.** No hay que instalar nada en el ordenador.
 
-## Qué necesitas en tu Mac
+## Cómo usarla (cuando esté publicada, Fase 1)
+1. Abre en Safari el enlace de la app que te pasará Claude.
+2. Pulsa el botón Compartir → **"Añadir a pantalla de inicio"**. A partir de ahí se abre como una app.
+3. Escribe la contraseña de la app (solo la primera vez).
+4. Rellena tu perfil (personas, edades y dirección) y pulsa **Comparar**.
 
-Hoy solo hace falta para una cosa: verificar desde la conexión de casa las tiendas que bloquean los servidores en la nube (Carrefour, Eroski y El Corte Inglés).
-
-1. **Instala Node.js 22.**
-   1. Ve a <https://nodejs.org>.
-   2. Descarga la versión "LTS" para macOS (22 o superior).
-   3. Instálala como cualquier programa.
-2. **Descarga el proyecto.**
-   1. Abre la app **Terminal** (Aplicaciones → Utilidades → Terminal).
-   2. Pega esto y pulsa Enter:
-      ```bash
-      git clone https://github.com/fabiojsp/Comprador.git
-      cd Comprador
-      ```
-      Si macOS te pide instalar las "herramientas de línea de comandos", acepta y repite el paso.
-3. **Instala las dependencias y el navegador de pruebas** (solo la primera vez, tarda unos minutos):
-   ```bash
-   npm install
-   npx playwright install chromium
-   ```
-4. **Lanza la verificación desde casa:**
-   ```bash
-   npm run verify-stores -- --label "Mac casa"
-   ```
-   Tarda unos 5 minutos. Verás una línea por tienda y CP. Al terminar, `docs/TIENDAS.md` tiene un bloque nuevo, "Red: Mac casa".
-5. **Comparte el resultado** con Claude: haz commit y push, o pega la salida de la Terminal en el chat.
-
-Si una tienda te muestra un CAPTCHA o "verificación de seguridad" también desde casa, la app **no** lo resolverá por ti. Se queda como "sin dato" y lo decidimos juntos.
-
-## Comandos
-
-| Comando | Para qué |
-|---|---|
-| `npm test` | Ejecuta los tests (no necesita internet) |
-| `npm run typecheck` | Comprueba los tipos de TypeScript |
-| `npm run verify-stores` | Verifica en vivo cobertura y envío en 07009, 07300 y 07360 |
-| `npm run verify-stores -- --cp 07350 --town Binissalem` | Verifica otro CP o población |
-| `npm run verify-stores -- --store alcampo` | Verifica solo una tienda |
+## Estado
+- **Fase 0 ✅**: verificación de tiendas. Ver [`docs/TIENDAS.md`](docs/TIENDAS.md).
+- **Fase 1**: lógica de la cesta, Mercadona y la app en el iPhone.
+- **Fase 2**: Alcampo e Hiper Centro.
 
 ## Documentos
-
-- [`SPEC.md`](SPEC.md): especificación completa y decisiones.
-- [`CLAUDE.md`](CLAUDE.md): reglas del repositorio (stack, convenciones y seguridad).
+- [`SPEC.md`](SPEC.md): qué hace la app y cómo.
+- [`CLAUDE.md`](CLAUDE.md): reglas del proyecto.
 - [`docs/TIENDAS.md`](docs/TIENDAS.md): estado verificado de cada tienda.
-- [`docs/FRAGILIDAD.md`](docs/FRAGILIDAD.md): qué partes se rompen con más facilidad y cómo detectarlo.
+- [`docs/FRAGILIDAD.md`](docs/FRAGILIDAD.md): qué se rompe con más facilidad y cómo detectarlo.
