@@ -10,6 +10,18 @@ Compara tu compra de supermercado en **Mercadona, Alcampo e Hiper Centro** con e
 3. Escribe la contraseña de la app (solo la primera vez).
 4. Rellena tu perfil (personas, edades y dirección) y pulsa **Comparar**.
 
+## Publicar en Vercel (una sola vez, 5 minutos, desde el móvil o el Mac)
+1. Entra en <https://vercel.com/new> con tu cuenta.
+2. En **Import Git Repository** elige `fabiojsp/Comprador`. Si no aparece, pulsa **Adjust GitHub App Permissions** y dale acceso a ese repositorio.
+3. **Project Name**: `cesta-mallorca`.
+4. **Root Directory**: pulsa *Edit* y elige `apps/web`.
+5. **Environment Variables**: añade estas dos (los valores te los da Claude; no los subas a GitHub):
+   - `APP_PASSWORD`: la contraseña para entrar en la app.
+   - `APP_SESSION_SECRET`: una clave larga aleatoria.
+6. Pulsa **Deploy** y espera unos 2 minutos.
+
+A partir de ahí, cada cambio que Claude suba a GitHub se publica solo.
+
 ## Estado
 - **Fase 0 ✅**: verificación de tiendas. Ver [`docs/TIENDAS.md`](docs/TIENDAS.md).
 - **Fase 1**: lógica de la cesta, Mercadona y la app en el iPhone.
