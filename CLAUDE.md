@@ -19,7 +19,9 @@ El usuario no es técnico y solo usa el iPhone: **nada debe requerir instalar o 
 | `npm test` | Vitest: lógica y conectores contra fixtures (sin internet) |
 | `npm run typecheck` | `tsc --noEmit` de todo el repo |
 | `npm run verify-stores -- [--cp 07360] [--store mercadona] [--label nube]` | Verificación en vivo de cobertura y envío; regenera el bloque de esa red en `docs/TIENDAS.md` |
-| `npm run dev` | *(Fase 1)* PWA en local |
+| `npm run dev` / `npm run build` | PWA en local (necesita `apps/web/.env.local` con `APP_PASSWORD` y `APP_SESSION_SECRET`) |
+| `npm run e2e` | Prueba de punta a punta en un iPhone simulado contra `BASE` (por defecto localhost:3100) |
+| `npx tsx scripts/try-mercadona.ts` | Compara en vivo la cesta de un perfil en Mercadona y muestra cada emparejado |
 
 En el contenedor de Claude, para que `fetch` use el proxy: `NODE_USE_ENV_PROXY=1`.
 

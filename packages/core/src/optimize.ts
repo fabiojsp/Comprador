@@ -156,7 +156,7 @@ export function recommend(stores: StoreInput[], itemIds: string[], threshold = D
 
   for (const s of singles) {
     if (s.shipping.cost === null) warnings.push(`${s.storeId}: envío sin dato, no puede salir recomendada`);
-    else if (s.belowMinimumBy && s.belowMinimumBy > 0) warnings.push(`${s.storeId}: faltan ${s.belowMinimumBy.toFixed(2)} € para el pedido mínimo`);
+    else if (s.belowMinimumBy && s.belowMinimumBy > 0) warnings.push(`${s.storeId}: faltan ${s.belowMinimumBy.toFixed(2).replace('.', ',')} € para el pedido mínimo`);
   }
 
   let pair: PairTotal | null = null;

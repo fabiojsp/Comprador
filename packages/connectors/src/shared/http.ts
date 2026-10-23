@@ -1,5 +1,5 @@
 import { sleep } from './pace.js';
-import { USER_AGENT } from './browser.js';
+import { USER_AGENT } from './ua.js';
 
 export interface HttpResult {
   status: number;

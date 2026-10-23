@@ -1,9 +1,9 @@
 import { chromium, type Browser, type BrowserContext, type Page } from 'playwright';
 import { detectBlock } from './block-detect.js';
 import type { BlockKind } from '@cesta/core';
+import { USER_AGENT } from './ua.js';
 
-export const USER_AGENT =
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36';
+export { USER_AGENT };
 
 export async function launchBrowser(opts: { headless?: boolean } = {}): Promise<Browser> {
   return chromium.launch({

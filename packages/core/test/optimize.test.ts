@@ -70,7 +70,7 @@ describe('recommend', () => {
     const noTerms: StoreInput = { ...alcampo, storeId: 'carrefour', terms: { baseCost: null, minOrder: null, freeFrom: null } };
     const r = recommend([{ ...mercadona, matches: { a: c(10) } }, noTerms], ['a']);
     expect(r.warnings.join(' ')).toMatch(/carrefour: envío sin dato/);
-    expect(r.warnings.join(' ')).toMatch(/mercadona: faltan 50.00/);
+    expect(r.warnings.join(' ')).toMatch(/mercadona: faltan 50,00/);
     expect(r.single).toBeNull();
   });
 });

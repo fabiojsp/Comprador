@@ -2,7 +2,7 @@
   "name": "cesta-mallorca",
   "private": true,
   "version": "0.0.0",
-  "description": "PWA que compara la compra online de supermercado en Mallorca con el envío incluido.",
+  "description": "PWA que compara la compra online de supermercado en Mallorca con el env\u00edo incluido.",
   "type": "module",
   "workspaces": [
     "apps/*",
@@ -15,7 +15,10 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "verify-stores": "tsx scripts/verify-stores.ts"
+    "verify-stores": "tsx scripts/verify-stores.ts",
+    "dev": "npm run dev -w @cesta/web",
+    "build": "npm run build -w @cesta/web",
+    "e2e": "node apps/web/e2e/flow.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.20.5",

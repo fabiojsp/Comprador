@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/* Dirección "tiquet de mercat": papel, tinta, teja mallorquina y oliva. */
+@theme {
+  --color-paper: #f6f1e7;
+  --color-card: #fffdf8;
+  --color-ink: #1f2421;
+  --color-muted: #6b675e;
+  --color-line: #ddd3c0;
+  --color-clay: #b8492a;
+  --color-clay-ink: #ffffff;
+  --color-olive: #4f6130;
+  --color-olive-soft: #e7ebd9;
+  --color-warn: #8a5a00;
+  --color-warn-soft: #f6ead0;
+  --font-sans: var(--font-ui), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-ticket), ui-monospace, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-paper: #171a18;
+    --color-card: #202421;
+    --color-ink: #efe9dc;
+    --color-muted: #a39e92;
+    --color-line: #353a36;
+    --color-clay: #e0714d;
+    --color-clay-ink: #1b0d07;
+    --color-olive: #a9bd7a;
+    --color-olive-soft: #273021;
+    --color-warn: #f0c060;
+    --color-warn-soft: #3a3020;
+  }
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Borde de tiquet: dientes de sierra de papel térmico. */
+.ticket-edge {
+  --tooth: 10px;
+  mask:
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / var(--tooth) 100%;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-clay);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
