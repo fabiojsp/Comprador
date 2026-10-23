@@ -1,4 +1,4 @@
-# Netlify: monorepo con npm workspaces; la app está en apps/web.
+# Netlify: monorepo con npm workspaces; la app Next.js está en apps/web.
 [build]
   base = "apps/web"
   command = "npm run build"
@@ -7,3 +7,7 @@
 [build.environment]
   NODE_VERSION = "22"
   NEXT_TELEMETRY_DISABLED = "1"
+
+# Adaptador oficial de Next.js (rutas de servidor, middleware, API).
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
