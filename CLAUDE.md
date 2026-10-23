@@ -8,7 +8,7 @@ El usuario no es técnico y solo usa el iPhone: **nada debe requerir instalar o 
 
 ## Stack
 - Monorepo con npm workspaces, TypeScript estricto, Node 22.
-- `apps/web`: Next.js (App Router) + Tailwind. PWA móvil primero. Rutas API que llaman a los conectores. Desplegado en **Vercel**. *(Fase 1)*
+- `apps/web`: Next.js (App Router) + Tailwind. PWA móvil primero. Rutas API que llaman a los conectores. Publicado en **Netlify** (<https://cesta-mallorca.netlify.app>, proyecto `cesta-mallorca`, `netlify.toml` + `@netlify/plugin-nextjs`).
 - `packages/core`: lógica pura y tipos (normalizador, emparejador, optimizador, cesta base). Sin E/S.
 - `packages/connectors`: un conector por tienda (`src/stores/<id>/`) + utilidades compartidas (`src/shared/`) + `fixtures/` + `test/`.
 - Sin base de datos en esta versión: perfil y listas viven en el iPhone (almacenamiento local de la PWA).
@@ -24,6 +24,8 @@ El usuario no es técnico y solo usa el iPhone: **nada debe requerir instalar o 
 | `npx tsx scripts/try-mercadona.ts` | Compara en vivo la cesta de un perfil en Mercadona y muestra cada emparejado |
 
 En el contenedor de Claude, para que `fetch` use el proxy: `NODE_USE_ENV_PROXY=1`.
+
+Publicar: conector de Netlify → `deploy-site` del proyecto `380661dd-b20f-4030-8c0e-f6f51f9ca670`; ejecuta desde la raíz del repo el comando `npx @netlify/mcp ...` que devuelve. Ojo: el conector no guarda variables marcadas como secretas (responde OK pero no se crean); usar variables normales con ámbito `all` y comprobar con `getAllEnvVars`.
 
 ## Convenciones
 - Código e identificadores en inglés; textos de interfaz, documentación y commits en español.
@@ -45,6 +47,6 @@ En el contenedor de Claude, para que `fetch` use el proxy: `NODE_USE_ENV_PROXY=1
 ## Reglas de seguridad (no negociables)
 1. **No** resolver, automatizar ni esquivar CAPTCHAs ni desafíos anti-bot (Cloudflare, Akamai, reCAPTCHA, AWS WAF), ni usar proxies para evadirlos. Si una web bloquea: `blockedBy` + "sin dato".
 2. **No** iniciar sesión en tiendas, **no** completar pagos, **no** aceptar condiciones legales.
-3. Secretos solo en variables de entorno (`.env` local, no versionado; variables de Vercel en producción). Documentados en `.env.example`.
+3. Secretos solo en variables de entorno (`.env` local, no versionado; variables de entorno de Netlify en producción). Documentados en `.env.example`.
 4. Nunca registrar en logs ni devolver en errores la dirección del usuario ni la contraseña de la app.
 5. Carpetas de capturas o depuración (`.debug/`) en `.gitignore`.

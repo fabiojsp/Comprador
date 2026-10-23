@@ -16,7 +16,7 @@ No hay login en las tiendas, no se rellena el carrito automáticamente y no hay 
 | Tema | Decisión |
 |---|---|
 | Cliente | PWA para iPhone (Safari → "Añadir a pantalla de inicio"), en español, móvil primero. |
-| Servidor | **Vercel** (cuenta ya conectada; despliega Claude). Next.js con funciones de servidor. Nada en el Mac. |
+| Servidor | **Netlify** (<https://cesta-mallorca.netlify.app>). Next.js con funciones de servidor mediante `@netlify/plugin-nextjs`. Nada en el Mac. |
 | Tiendas | Principales: **Mercadona, Carrefour y Eroski**. Extra: **Alcampo e Hiper Centro**. Fuera: Lidl (no vende comida online), Aldi y El Corte Inglés. |
 | Carrefour y Eroski | Bloquean los servidores en la nube y no se esquiva esa protección. Hay dos vías, las dos con conexión real (no de centro de datos): **(1) Atajo del iPhone** (Fase 1): el usuario abre la tienda en Safari, pulsa Compartir → "Cesta: leer precios" y su iPhone consulta la lista con su conexión; las páginas en bruto se envían a la app, que las interpreta. **(2) Mini PC en casa** (fase posterior, opcional): un equipo siempre encendido conectado al router hace lo mismo de forma automática. |
 | Datos del usuario | Perfil y listas se guardan **en el propio iPhone** (almacenamiento local de la PWA). Sin cuentas ni base de datos en esta versión. |
@@ -121,7 +121,7 @@ Ver `CLAUDE.md`. En resumen:
 | Fase | Alcance | ✅ Hecho cuando |
 |---|---|---|
 | **0** ✅ | Verificación de tiendas, `TIENDAS.md`, `SPEC.md`, `CLAUDE.md` | Hecho el 22/10/2026 |
-| **1** | Lógica (`core`: cesta base, normalizador, emparejador, optimizador) + Mercadona + PWA (contraseña, perfil, lista, comparar, lista final) en Vercel + **atajo del iPhone para Carrefour y Eroski** | Desde el iPhone, una lista de 30 productos se compara en Mercadona, Carrefour y Eroski, con €/kg y total con envío |
+| **1** | Lógica (`core`: cesta base, normalizador, emparejador, optimizador) + Mercadona + PWA (contraseña, perfil, lista, comparar, lista final) en Netlify + **atajo del iPhone para Carrefour y Eroski** | Desde el iPhone, una lista de 30 productos se compara en Mercadona, Carrefour y Eroski, con €/kg y total con envío |
 | **2** | Extras: Alcampo e Hiper Centro. Opcional: mini PC en casa para Carrefour y Eroski en automático | La misma lista se compara en las 5 tiendas y la recomendación cuadra con las webs |
 | **3** | Ofertas, historial de compras, ajustes de cantidades base | — |
 | Más adelante (opcional) | Carrito automático, más tiendas, cuentas y base de datos, versión comercial | Se decide cuando la versión simple esté en uso |
