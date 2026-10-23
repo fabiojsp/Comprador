@@ -1,0 +1,725 @@
+{
+ "nbHits": 21,
+ "hits": [
+  {
+   "id": "10721",
+   "display_name": "Leche semidesnatada sin lactosa Hacendado",
+   "brand": "Hacendado",
+   "packaging": null,
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/10721/leche-semidesnatada-sin-lactosa-hacendado-pack-6",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/6b02e742d27be2ee2db0994bc431fe99.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 72,
+       "name": "Leche y bebidas vegetales",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 343,
+         "name": "Leche semidesnatada",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": true,
+    "pack_size": 1.0,
+    "unit_name": "briks",
+    "unit_size": 6.0,
+    "bulk_price": "0.94",
+    "unit_price": "5.64",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": 6,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "0.940",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "10382",
+   "display_name": "Leche semidesnatada Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Brik",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/10382/leche-semidesnatada-hacendado-brick",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/5a14472b53ac7a848fc8220982694c4a.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 72,
+       "name": "Leche y bebidas vegetales",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 343,
+         "name": "Leche semidesnatada",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.0,
+    "bulk_price": "0.83",
+    "unit_price": "0.83",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "0.830",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "10722",
+   "display_name": "Leche semidesnatada sin lactosa Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Brik",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/10722/leche-semidesnatada-sin-lactosa-hacendado-brick",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/0a223f379a6d628804b8043f48320fc6.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 72,
+       "name": "Leche y bebidas vegetales",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 343,
+         "name": "Leche semidesnatada",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.0,
+    "bulk_price": "0.94",
+    "unit_price": "0.94",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "0.940",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "10541",
+   "display_name": "Leche semidesnatada Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Pack-6",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/10541/leche-semidesnatada-hacendado-pack-6",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/866fa5a181f2d26607393eac0323a40c.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 72,
+       "name": "Leche y bebidas vegetales",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 343,
+         "name": "Leche semidesnatada",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": true,
+    "pack_size": 1.5,
+    "unit_name": "botellas",
+    "unit_size": 9.0,
+    "bulk_price": "0.97",
+    "unit_price": "8.70",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": 6,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "0.967",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "10683",
+   "display_name": "Leche semidesnatada calcio Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Pack-6",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/10683/leche-semidesnatada-calcio-hacendado-pack-6",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/cf197c52289c9349011966afbe4ca15c.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 72,
+       "name": "Leche y bebidas vegetales",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 343,
+         "name": "Leche semidesnatada",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": true,
+    "pack_size": 1.0,
+    "unit_name": "briks",
+    "unit_size": 6.0,
+    "bulk_price": "1.05",
+    "unit_price": "6.30",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": 6,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "1.050",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "10794",
+   "display_name": "Leche semidesnatada Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Pack-6",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/10794/leche-semidesnatada-hacendado-pack-6",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/f16c6d550a0a4236222a7dfdea3017ca.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 72,
+       "name": "Leche y bebidas vegetales",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 343,
+         "name": "Leche semidesnatada",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": true,
+    "pack_size": 0.2,
+    "unit_name": "mini briks",
+    "unit_size": 1.2,
+    "bulk_price": "1.37",
+    "unit_price": "1.64",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": 6,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "1.367",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "10732",
+   "display_name": "Leche semidesnatada sin lactosa Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Pack-6",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/10732/leche-semidesnatada-sin-lactosa-hacendado-pack-6",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/86beaab2a15ac2d9840049b9cdbd6535.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 72,
+       "name": "Leche y bebidas vegetales",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 343,
+         "name": "Leche semidesnatada",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": true,
+    "pack_size": 0.2,
+    "unit_name": "mini briks",
+    "unit_size": 1.2,
+    "bulk_price": "1.58",
+    "unit_price": "1.90",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": 6,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "1.584",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "10922",
+   "display_name": "Leche semidesnatada Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Botella",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/10922/leche-semidesnatada-fresca-hacendado-botella",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/7f509c7db41e5763626998702f5cb755.jpeg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 72,
+       "name": "Leche y bebidas vegetales",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 343,
+         "name": "Leche semidesnatada",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.0,
+    "bulk_price": "1.09",
+    "unit_price": "1.09",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "1.090",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "10545",
+   "display_name": "Leche semidesnatada sin lactosa Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Pack-6",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/10545/leche-semidesnatada-sin-lactosa-hacendado-pack-6",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/f0cd5d59c24ed6637a2d1f1e1c4bd093.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 72,
+       "name": "Leche y bebidas vegetales",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 343,
+         "name": "Leche semidesnatada",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": true,
+    "pack_size": 1.5,
+    "unit_name": "botellas",
+    "unit_size": 9.0,
+    "bulk_price": "1.08",
+    "unit_price": "9.72",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": 6,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "1.080",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "10542",
+   "display_name": "Leche semidesnatada Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Botella",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/10542/leche-semidesnatada-hacendado-botella",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/ff7a708dfba6860d1c625d4cf8316719.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 72,
+       "name": "Leche y bebidas vegetales",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 343,
+         "name": "Leche semidesnatada",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.5,
+    "bulk_price": "0.97",
+    "unit_price": "1.45",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "0.967",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "10546",
+   "display_name": "Leche semidesnatada sin lactosa Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Botella",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/10546/leche-semidesnatada-sin-lactosa-hacendado-botella",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/cb6c51dc548abac574de376046426d67.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 72,
+       "name": "Leche y bebidas vegetales",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 343,
+         "name": "Leche semidesnatada",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.5,
+    "bulk_price": "1.08",
+    "unit_price": "1.62",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "1.080",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "10685",
+   "display_name": "Leche semidesnatada calcio Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Brik",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/10685/leche-semidesnatada-calcio-hacendado-brick",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/9105d6bbc58b552d881406c4fdac38ff.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 72,
+       "name": "Leche y bebidas vegetales",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 343,
+         "name": "Leche semidesnatada",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.0,
+    "bulk_price": "1.05",
+    "unit_price": "1.05",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "1.050",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  }
+ ]
+}

@@ -1,0 +1,809 @@
+{
+ "nbHits": 49,
+ "hits": [
+  {
+   "id": "69975",
+   "display_name": "Tomates pera",
+   "brand": "",
+   "packaging": null,
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69975/tomates-pera-bandeja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/40027e42b9ec9f0693e8f6eb09e1e213.jpeg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 29,
+       "name": "Verdura",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 855,
+         "name": "Tomate",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": true,
+    "pack_size": 1.0,
+    "unit_name": null,
+    "unit_size": 1.11,
+    "bulk_price": "2.30",
+    "unit_price": "2.55",
+    "approx_size": true,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "2.300",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "17132",
+   "display_name": "Tomate frito Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Pack-3",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/17132/tomate-frito-hacendado-pack-3",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/e589c8259daf4b9335098fb9ade7ee09.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 12,
+     "name": "Aceite, especias y salsas",
+     "level": 0,
+     "categories": [
+      {
+       "id": 117,
+       "name": "Otras salsas",
+       "level": 1,
+       "order": 7,
+       "categories": [
+        {
+         "id": 435,
+         "name": "Tomate frito",
+         "level": 2,
+         "order": 7
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "Conservas, caldos y cremas",
+     "level": 0,
+     "categories": [
+      {
+       "id": 126,
+       "name": "Tomate",
+       "level": 1,
+       "order": 215,
+       "categories": [
+        {
+         "id": 460,
+         "name": "Tomate",
+         "level": 2,
+         "order": 215
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": true,
+    "pack_size": 0.4,
+    "unit_name": "briks",
+    "unit_size": 1.2,
+    "bulk_price": "1.13",
+    "unit_price": "1.35",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": 3,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "1.125",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "16044",
+   "display_name": "Tomate triturado Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Bote",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/16044/tomate-triturado-hacendado-freir-bote",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/db53895dcbf286affe16def253a0ab89.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 14,
+     "name": "Conservas, caldos y cremas",
+     "level": 0,
+     "categories": [
+      {
+       "id": 126,
+       "name": "Tomate",
+       "level": 1,
+       "order": 215,
+       "categories": [
+        {
+         "id": 460,
+         "name": "Tomate",
+         "level": 2,
+         "order": 215
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.4,
+    "bulk_price": "1.38",
+    "unit_price": "0.55",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "1.375",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69990",
+   "display_name": "Tomates cherry",
+   "brand": null,
+   "packaging": "Bandeja",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69990/tomates-cherry-bandeja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/686833b9bfd1cc7f410c39199a347a85.jpeg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 29,
+       "name": "Verdura",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 855,
+         "name": "Tomate",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.5,
+    "bulk_price": "4.40",
+    "unit_price": "2.20",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "4.400",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "17163",
+   "display_name": "Tomate frito receta artesana Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Tarro",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/17163/tomate-frito-receta-artesana-hacendado-con-aceite-oliva-tarro",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/959baf90e8b8eee09398534f7c549992.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 12,
+     "name": "Aceite, especias y salsas",
+     "level": 0,
+     "categories": [
+      {
+       "id": 117,
+       "name": "Otras salsas",
+       "level": 1,
+       "order": 7,
+       "categories": [
+        {
+         "id": 435,
+         "name": "Tomate frito",
+         "level": 2,
+         "order": 7
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "Conservas, caldos y cremas",
+     "level": 0,
+     "categories": [
+      {
+       "id": 126,
+       "name": "Tomate",
+       "level": 1,
+       "order": 215,
+       "categories": [
+        {
+         "id": 460,
+         "name": "Tomate",
+         "level": 2,
+         "order": 215
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.56,
+    "bulk_price": "3.57",
+    "unit_price": "2.00",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "3.572",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69937",
+   "display_name": "Tomate ensalada",
+   "brand": null,
+   "packaging": "Pieza",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69937/tomate-ensalada-pieza",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/ccb2b42ba2bb6a7b692dac6101074709.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 29,
+       "name": "Verdura",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 855,
+         "name": "Tomate",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.273,
+    "bulk_price": "2.50",
+    "unit_price": "0.68",
+    "approx_size": true,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "2.500",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "17131",
+   "display_name": "Tomate frito receta artesana Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Tarro",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/17131/tomate-frito-receta-artesana-hacendado-con-aceite-oliva-tarro",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/450e65a016ec657d968e9926d761ec85.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 12,
+     "name": "Aceite, especias y salsas",
+     "level": 0,
+     "categories": [
+      {
+       "id": 117,
+       "name": "Otras salsas",
+       "level": 1,
+       "order": 7,
+       "categories": [
+        {
+         "id": 435,
+         "name": "Tomate frito",
+         "level": 2,
+         "order": 7
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "Conservas, caldos y cremas",
+     "level": 0,
+     "categories": [
+      {
+       "id": 126,
+       "name": "Tomate",
+       "level": 1,
+       "order": 215,
+       "categories": [
+        {
+         "id": 460,
+         "name": "Tomate",
+         "level": 2,
+         "order": 215
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.3,
+    "bulk_price": "4.67",
+    "unit_price": "1.40",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "4.667",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "17151",
+   "display_name": "Tomate frito Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Pack-3",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/17151/tomate-frito-hacendado-pack-3",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/bef3c040943e4b6dd59b15f565ec4f08.jpeg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 12,
+     "name": "Aceite, especias y salsas",
+     "level": 0,
+     "categories": [
+      {
+       "id": 117,
+       "name": "Otras salsas",
+       "level": 1,
+       "order": 7,
+       "categories": [
+        {
+         "id": 435,
+         "name": "Tomate frito",
+         "level": 2,
+         "order": 7
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "Conservas, caldos y cremas",
+     "level": 0,
+     "categories": [
+      {
+       "id": 126,
+       "name": "Tomate",
+       "level": 1,
+       "order": 215,
+       "categories": [
+        {
+         "id": 460,
+         "name": "Tomate",
+         "level": 2,
+         "order": 215
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": true,
+    "pack_size": 0.21,
+    "unit_name": "mini briks",
+    "unit_size": 0.63,
+    "bulk_price": "1.51",
+    "unit_price": "0.95",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": 3,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "1.508",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69414",
+   "display_name": "Tomates cherry en rama Dulcita",
+   "brand": "Dulcita",
+   "packaging": "Bandeja",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69414/tomates-cherry-rama-dulcita-bandeja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/66cbca38df7850609b4eaa53baace8b0.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 29,
+       "name": "Verdura",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 855,
+         "name": "Tomate",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.2,
+    "bulk_price": "12.50",
+    "unit_price": "2.50",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "12.500",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "16043",
+   "display_name": "Tomate triturado Hacendado",
+   "brand": "Hacendado",
+   "packaging": "Bote",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/16043/tomate-triturado-hacendado-freir-bote",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/117a2a2230b103f17b50e07a73a8fc38.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 14,
+     "name": "Conservas, caldos y cremas",
+     "level": 0,
+     "categories": [
+      {
+       "id": 126,
+       "name": "Tomate",
+       "level": 1,
+       "order": 215,
+       "categories": [
+        {
+         "id": 460,
+         "name": "Tomate",
+         "level": 2,
+         "order": 215
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.8,
+    "bulk_price": "1.25",
+    "unit_price": "1.00",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "1.250",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69912",
+   "display_name": "Tomate pera",
+   "brand": null,
+   "packaging": "Pieza",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69912/tomate-pera-pieza",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/29e2448e80d5a23e8fc907138e551748.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 29,
+       "name": "Verdura",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 855,
+         "name": "Tomate",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.125,
+    "bulk_price": "2.20",
+    "unit_price": "0.28",
+    "approx_size": true,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "2.200",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69930",
+   "display_name": "Tomates cherry pera kumato",
+   "brand": null,
+   "packaging": "Bandeja",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69930/tomates-cherry-pera-kumato-bandeja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/0b7b48379a277881183c9d692b671999.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 29,
+       "name": "Verdura",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 855,
+         "name": "Tomate",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.3,
+    "bulk_price": "5.67",
+    "unit_price": "1.70",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "5.667",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  }
+ ]
+}

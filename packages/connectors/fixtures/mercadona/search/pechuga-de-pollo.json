@@ -1,0 +1,774 @@
+{
+ "nbHits": 16,
+ "hits": [
+  {
+   "id": "30006",
+   "display_name": "Pechugas de pollo enteras congeladas",
+   "brand": "",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/30006/pechugas-pollo-enteras-congeladas-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/beef28a8164cac17abbabfb7d4f4b275.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 3,
+     "name": "Carne",
+     "level": 0,
+     "categories": [
+      {
+       "id": 47,
+       "name": "Carne congelada",
+       "level": 1,
+       "order": 17,
+       "categories": [
+        {
+         "id": 290,
+         "name": "Carne congelada",
+         "level": 2,
+         "order": 17
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": 17,
+     "name": "Congelados",
+     "level": 0,
+     "categories": [
+      {
+       "id": 148,
+       "name": "Carne",
+       "level": 1,
+       "order": 213,
+       "categories": [
+        {
+         "id": 511,
+         "name": "Carne",
+         "level": 2,
+         "order": 213
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.2,
+    "bulk_price": "6.10",
+    "unit_price": "7.32",
+    "approx_size": true,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "6.100",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "18106",
+   "display_name": "Pechuga de pollo braseada Hacendado lonchas",
+   "brand": "Hacendado",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/18106/pechuga-pollo-braseada-hacendado-lonchas-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/857e317f4da4d99288d787a428f564be.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 4,
+     "name": "Charcutería y quesos",
+     "level": 0,
+     "categories": [
+      {
+       "id": 48,
+       "name": "Aves y jamón cocido",
+       "level": 1,
+       "order": 159,
+       "categories": [
+        {
+         "id": 292,
+         "name": "Pavo y otros",
+         "level": 2,
+         "order": 159
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.225,
+    "bulk_price": "10.22",
+    "unit_price": "2.30",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "10.223",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "8667",
+   "display_name": "Pechuga de pollo 92% Hacendado lonchas",
+   "brand": "Hacendado",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/8667/pechuga-pollo-92-hacendado-lonchas-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/487f790bff56fce10fb0570a57ee5c2e.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 4,
+     "name": "Charcutería y quesos",
+     "level": 0,
+     "categories": [
+      {
+       "id": 48,
+       "name": "Aves y jamón cocido",
+       "level": 1,
+       "order": 159,
+       "categories": [
+        {
+         "id": 293,
+         "name": "Jamón cocido",
+         "level": 2,
+         "order": 159
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.2,
+    "bulk_price": "14.25",
+    "unit_price": "2.85",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "14.250",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "21647",
+   "display_name": "Pechuga de pollo braseada extrafino Hacendado lonchas",
+   "brand": "Hacendado",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/21647/pechuga-pollo-braseada-extrafino-hacendado-lonchas-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/3a1c91aedd4a8405f6457a978c78df72.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 4,
+     "name": "Charcutería y quesos",
+     "level": 0,
+     "categories": [
+      {
+       "id": 48,
+       "name": "Aves y jamón cocido",
+       "level": 1,
+       "order": 159,
+       "categories": [
+        {
+         "id": 292,
+         "name": "Pavo y otros",
+         "level": 2,
+         "order": 159
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.15,
+    "bulk_price": "19.00",
+    "unit_price": "2.85",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "19.000",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "17460",
+   "display_name": "Pechugas de pollo marinadas empanadas",
+   "brand": "",
+   "packaging": "Bandeja",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/17460/pechugas-pollo-empanadas-marinadas-bandeja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/96a22d652398ad93e3b0465437b9d323.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 3,
+     "name": "Carne",
+     "level": 0,
+     "categories": [
+      {
+       "id": 38,
+       "name": "Aves y pollo",
+       "level": 1,
+       "order": 17,
+       "categories": [
+        {
+         "id": 281,
+         "name": "Pollo",
+         "level": 2,
+         "order": 17
+        }
+       ]
+      },
+      {
+       "id": 45,
+       "name": "Empanados y elaborados",
+       "level": 1,
+       "order": 17,
+       "categories": [
+        {
+         "id": 288,
+         "name": "Empanados y elaborados",
+         "level": 2,
+         "order": 17
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.445,
+    "bulk_price": "8.70",
+    "unit_price": "3.87",
+    "approx_size": true,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "8.700",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "3400",
+   "display_name": "Filetes pechuga de pollo corte fino",
+   "brand": "",
+   "packaging": "Bandeja",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/3400/filetes-pechuga-pollo-corte-fino-minimo-10-filetes-bandeja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/c89d28c5929f14861da52e2508912e3d.jpeg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 3,
+     "name": "Carne",
+     "level": 0,
+     "categories": [
+      {
+       "id": 38,
+       "name": "Aves y pollo",
+       "level": 1,
+       "order": 17,
+       "categories": [
+        {
+         "id": 281,
+         "name": "Pollo",
+         "level": 2,
+         "order": 17
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.5,
+    "bulk_price": "8.20",
+    "unit_price": "4.10",
+    "approx_size": true,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "8.200",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "2787",
+   "display_name": "Filetes pechuga de pollo",
+   "brand": null,
+   "packaging": "Bandeja",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/2787/filetes-pechuga-pollo-bandeja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/cfbe3b741d3a64cc637efe0c7bf0bb93.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 3,
+     "name": "Carne",
+     "level": 0,
+     "categories": [
+      {
+       "id": 38,
+       "name": "Aves y pollo",
+       "level": 1,
+       "order": 17,
+       "categories": [
+        {
+         "id": 281,
+         "name": "Pollo",
+         "level": 2,
+         "order": 17
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.55,
+    "bulk_price": "7.70",
+    "unit_price": "4.24",
+    "approx_size": true,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "7.700",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "2791",
+   "display_name": "Filetes pechuga de pollo certificado alimentado con un 50% de maíz",
+   "brand": null,
+   "packaging": "Bandeja",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/2791/filetes-pechuga-pollo-certificado-alimentado-con-50-maiz-bandeja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/c0902c682f4d28953dc3dbf54cfbca00.jpeg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 3,
+     "name": "Carne",
+     "level": 0,
+     "categories": [
+      {
+       "id": 38,
+       "name": "Aves y pollo",
+       "level": 1,
+       "order": 17,
+       "categories": [
+        {
+         "id": 281,
+         "name": "Pollo",
+         "level": 2,
+         "order": 17
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.5,
+    "bulk_price": "10.00",
+    "unit_price": "5.00",
+    "approx_size": true,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "10.000",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "3653",
+   "display_name": "Filetes pechuga de pollo extra tiernos",
+   "brand": null,
+   "packaging": "Bandeja",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/3653/filetes-pechuga-pollo-extra-tiernos-bandeja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/73de377ed3df77f417090cb84455c9bf.jpeg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 3,
+     "name": "Carne",
+     "level": 0,
+     "categories": [
+      {
+       "id": 38,
+       "name": "Aves y pollo",
+       "level": 1,
+       "order": 17,
+       "categories": [
+        {
+         "id": 281,
+         "name": "Pollo",
+         "level": 2,
+         "order": 17
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.56,
+    "bulk_price": "7.70",
+    "unit_price": "4.31",
+    "approx_size": true,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "7.700",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "2833",
+   "display_name": "Filetes pechuga de pollo finas hierbas marinadas",
+   "brand": "",
+   "packaging": "Bandeja",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/2833/pechugas-pollo-finas-hierbas-marinadas-bandeja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/b41d5df0b7894464440dc93ad577066f.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 3,
+     "name": "Carne",
+     "level": 0,
+     "categories": [
+      {
+       "id": 38,
+       "name": "Aves y pollo",
+       "level": 1,
+       "order": 17,
+       "categories": [
+        {
+         "id": 281,
+         "name": "Pollo",
+         "level": 2,
+         "order": 17
+        }
+       ]
+      },
+      {
+       "id": 45,
+       "name": "Empanados y elaborados",
+       "level": 1,
+       "order": 17,
+       "categories": [
+        {
+         "id": 288,
+         "name": "Empanados y elaborados",
+         "level": 2,
+         "order": 17
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.6,
+    "bulk_price": "8.20",
+    "unit_price": "4.92",
+    "approx_size": true,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "8.200",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "56661",
+   "display_name": "Tiras de pechuga de pollo 99% Hacendado al natural",
+   "brand": "Hacendado",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/56661/tiras-pechuga-pollo-natural-hacendado-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/d14a184efcd64af70c57ea510d8e88b2.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 4,
+     "name": "Charcutería y quesos",
+     "level": 0,
+     "categories": [
+      {
+       "id": 48,
+       "name": "Aves y jamón cocido",
+       "level": 1,
+       "order": 159,
+       "categories": [
+        {
+         "id": 292,
+         "name": "Pavo y otros",
+         "level": 2,
+         "order": 159
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.14,
+    "bulk_price": "16.07",
+    "unit_price": "2.25",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "16.072",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "3724",
+   "display_name": "Pechugas enteras de pollo",
+   "brand": null,
+   "packaging": "Bandeja",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/3724/pechugas-enteras-pollo-bandeja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/626ed2bc08b4d92dc0d786b7c368a8c9.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 3,
+     "name": "Carne",
+     "level": 0,
+     "categories": [
+      {
+       "id": 38,
+       "name": "Aves y pollo",
+       "level": 1,
+       "order": 17,
+       "categories": [
+        {
+         "id": 281,
+         "name": "Pollo",
+         "level": 2,
+         "order": 17
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.58,
+    "bulk_price": "6.65",
+    "unit_price": "3.86",
+    "approx_size": true,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "6.650",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  }
+ ]
+}

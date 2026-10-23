@@ -78,6 +78,11 @@ export interface DeliveryTerms {
 
 export type Unit = 'kg' | 'l' | 'ud';
 
+export interface Size {
+  qty: number;
+  unit: Unit;
+}
+
 export interface PromoInfo {
   kind: '2x1' | '3x2' | 'second_unit_pct' | 'direct_discount' | 'reduced_price' | 'other';
   label: string;
@@ -94,6 +99,10 @@ export interface ProductOffer {
   isStoreBrand: boolean | null;
   /** Texto de formato tal cual lo da la tienda ("pack 6 x 1 L"). */
   formatText: string | null;
+  /** Contenido total de una unidad de venta en kg, L o ud (un pack de 6 × 1 L = 6 L). `null` si no se pudo leer. */
+  size: Size | null;
+  /** Piezas por unidad de venta (6 briks, 12 huevos, 4 yogures). `null` si no se sabe. */
+  pieces: number | null;
   /** Precio por unidad de venta (lo que se paga al añadir 1). */
   price: number;
   /** Precio de referencia de la tienda (€/kg, €/L, €/ud), si lo da. */

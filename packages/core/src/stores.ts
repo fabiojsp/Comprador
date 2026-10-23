@@ -27,9 +27,9 @@ export const STORES: Record<StoreId, StoreInfo> = {
     name: 'Carrefour',
     url: 'https://www.carrefour.es/supermercado',
     kind: 'online_alimentacion',
-    active: false,
+    active: true,
     requiresLogin: false,
-    notes: 'Fuera de alcance por ahora: Cloudflare bloquea servidores en la nube (403).',
+    notes: 'Cloudflare bloquea servidores en la nube (403): se lee con el atajo del iPhone.',
   },
   alcampo: {
     id: 'alcampo',
@@ -45,9 +45,9 @@ export const STORES: Record<StoreId, StoreInfo> = {
     name: 'Eroski',
     url: 'https://supermercado.eroski.es',
     kind: 'online_alimentacion',
-    active: false,
+    active: true,
     requiresLogin: false,
-    notes: 'Fuera de alcance por ahora: comprobación reCAPTCHA desde servidores en la nube.',
+    notes: 'Comprobación reCAPTCHA desde servidores en la nube: se lee con el atajo del iPhone.',
   },
   eci: {
     id: 'eci',
@@ -56,7 +56,7 @@ export const STORES: Record<StoreId, StoreInfo> = {
     kind: 'online_alimentacion',
     active: false,
     requiresLogin: false,
-    notes: 'Fuera de alcance por ahora: Akamai devuelve "Access Denied" a servidores en la nube.',
+    notes: 'Fuera de alcance: Akamai devuelve "Access Denied" a servidores en la nube.',
   },
   hipercentro: {
     id: 'hipercentro',

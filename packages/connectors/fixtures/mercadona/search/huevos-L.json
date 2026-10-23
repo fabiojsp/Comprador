@@ -1,0 +1,305 @@
+{
+ "nbHits": 5,
+ "hits": [
+  {
+   "id": "31504",
+   "display_name": "Huevos grandes L",
+   "brand": "",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/31504/huevos-grandes-l-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/707625e3e76b36f1834d56c1ed8aa8df.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 77,
+       "name": "Huevos",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 354,
+         "name": "Huevos",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 12.0,
+    "bulk_price": "0.25",
+    "unit_price": "3.05",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "3.050",
+    "min_bunch_amount": 1.0,
+    "reference_format": "dc",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "31540",
+   "display_name": "Huevos grandes L",
+   "brand": "",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/31540/huevos-grandes-l-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/f320cc362d58afd514c38aae399c6cec.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 77,
+       "name": "Huevos",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 354,
+         "name": "Huevos",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 6.0,
+    "bulk_price": "0.30",
+    "unit_price": "1.80",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "3.600",
+    "min_bunch_amount": 1.0,
+    "reference_format": "dc",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "31312",
+   "display_name": "Claras de huevo líquidas pasteurizadas",
+   "brand": null,
+   "packaging": "Botella",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/31312/claras-huevo-liquidas-pasteurizadas-botella",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/cde7e603fa71c589abe8e10279bd36ab.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 77,
+       "name": "Huevos",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 354,
+         "name": "Huevos",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.0,
+    "bulk_price": "2.85",
+    "unit_price": "2.85",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "2.850",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "31309",
+   "display_name": "Claras de huevo líquidas pasteurizadas",
+   "brand": null,
+   "packaging": "Botella",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/31309/claras-huevo-liquidas-pasteurizadas-botella",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/b40abf149eb42080eb449e0bdc83bda0.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 6,
+     "name": "Huevos, leche y mantequilla",
+     "level": 0,
+     "categories": [
+      {
+       "id": 77,
+       "name": "Huevos",
+       "level": 1,
+       "order": 373,
+       "categories": [
+        {
+         "id": 354,
+         "name": "Huevos",
+         "level": 2,
+         "order": 373
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.3,
+    "bulk_price": "5.67",
+    "unit_price": "1.70",
+    "approx_size": false,
+    "size_format": "l",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "5.667",
+    "min_bunch_amount": 1.0,
+    "reference_format": "L",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "18158",
+   "display_name": "Bollo bañado de chocolate y huevo con disquitos",
+   "brand": "",
+   "packaging": "Bandeja",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/18158/bollo-con-cobertura-cacao-huevo-sorpresa-con-disquitos-bandeja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/30c633fb0366095acda3eb8c4bfd55f1.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 5,
+     "name": "Panadería y pastelería",
+     "level": 0,
+     "categories": [
+      {
+       "id": 65,
+       "name": "Bollería de horno",
+       "level": 1,
+       "order": 515,
+       "categories": [
+        {
+         "id": 330,
+         "name": "Bollería dulce",
+         "level": 2,
+         "order": 515
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.16,
+    "bulk_price": "14.06",
+    "unit_price": "2.25",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "10.000",
+    "price_decreased": false,
+    "reference_price": "14.063",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  }
+ ]
+}

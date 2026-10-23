@@ -1,0 +1,767 @@
+{
+ "nbHits": 20,
+ "hits": [
+  {
+   "id": "47818",
+   "display_name": "Papel higiénico Doble Rollo Bosque Verde",
+   "brand": "Bosque Verde",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/47818/papel-higienico-doble-rollo-bosque-verde-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/2114d726e660470b9eea54e72125280a.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 26,
+     "name": "Limpieza y hogar",
+     "level": 0,
+     "categories": [
+      {
+       "id": 238,
+       "name": "Papel higiénico y celulosa",
+       "level": 1,
+       "order": 374,
+       "categories": [
+        {
+         "id": 755,
+         "name": "Papel higiénico",
+         "level": 2,
+         "order": 374
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": "rollos",
+    "unit_size": 1.0,
+    "bulk_price": "0.38",
+    "unit_price": "4.60",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": 12,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "21.000",
+    "price_decreased": false,
+    "reference_price": "0.384",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "47291",
+   "display_name": "Papel higiénico húmedo WC Bosque Verde",
+   "brand": "Bosque Verde",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/47291/papel-higienico-humedo-wc-bosque-verde-con-aloe-vera-camomila-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/c68d2b5eab2731c6dd548946adabb1d1.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 20,
+     "name": "Cuidado facial y corporal",
+     "level": 0,
+     "categories": [
+      {
+       "id": 189,
+       "name": "Cuidado corporal",
+       "level": 1,
+       "order": 241,
+       "categories": [
+        {
+         "id": 614,
+         "name": "Toallitas",
+         "level": 2,
+         "order": 241
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": 26,
+     "name": "Limpieza y hogar",
+     "level": 0,
+     "categories": [
+      {
+       "id": 238,
+       "name": "Papel higiénico y celulosa",
+       "level": 1,
+       "order": 374,
+       "categories": [
+        {
+         "id": 755,
+         "name": "Papel higiénico",
+         "level": 2,
+         "order": 374
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 100.0,
+    "bulk_price": "0.02",
+    "unit_price": "1.55",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "21.000",
+    "price_decreased": false,
+    "reference_price": "0.016",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "12912",
+   "display_name": "Papel higiénico Suave Bosque Verde",
+   "brand": "Bosque Verde",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/12912/papel-higienico-suave-bosque-verde-4-capas-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/c101fb054823f64dfbece29949dd8e23.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 26,
+     "name": "Limpieza y hogar",
+     "level": 0,
+     "categories": [
+      {
+       "id": 238,
+       "name": "Papel higiénico y celulosa",
+       "level": 1,
+       "order": 374,
+       "categories": [
+        {
+         "id": 755,
+         "name": "Papel higiénico",
+         "level": 2,
+         "order": 374
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": "rollos",
+    "unit_size": 1.0,
+    "bulk_price": "0.46",
+    "unit_price": "3.70",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": 8,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "21.000",
+    "price_decreased": false,
+    "reference_price": "0.463",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "47819",
+   "display_name": "Papel higiénico Doble Rollo Bosque Verde",
+   "brand": "Bosque Verde",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/47819/papel-higienico-doble-rollo-bosque-verde-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/7dceeae4ce17bf0c89c9e02330457a4a.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 26,
+     "name": "Limpieza y hogar",
+     "level": 0,
+     "categories": [
+      {
+       "id": 238,
+       "name": "Papel higiénico y celulosa",
+       "level": 1,
+       "order": 374,
+       "categories": [
+        {
+         "id": 755,
+         "name": "Papel higiénico",
+         "level": 2,
+         "order": 374
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": "rollos",
+    "unit_size": 1.0,
+    "bulk_price": "0.40",
+    "unit_price": "2.40",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": 6,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "21.000",
+    "price_decreased": false,
+    "reference_price": "0.400",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "47835",
+   "display_name": "Papel higiénico doble hoja Bosque Verde",
+   "brand": "Bosque Verde",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/47835/papel-higienico-doble-hoja-bosque-verde-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/8629429b287c46d53db4df0f83fee72a.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 26,
+     "name": "Limpieza y hogar",
+     "level": 0,
+     "categories": [
+      {
+       "id": 238,
+       "name": "Papel higiénico y celulosa",
+       "level": 1,
+       "order": 374,
+       "categories": [
+        {
+         "id": 755,
+         "name": "Papel higiénico",
+         "level": 2,
+         "order": 374
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": "rollos",
+    "unit_size": 1.0,
+    "bulk_price": "0.20",
+    "unit_price": "2.40",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": 12,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "21.000",
+    "price_decreased": false,
+    "reference_price": "0.200",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "47293",
+   "display_name": "Papel higiénico húmedo WC Bosque Verde",
+   "brand": "Bosque Verde",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/47293/papel-higienico-humedo-wc-bosque-verde-con-aloe-vera-camomila-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/b28e83f87f4061d7092638225b942bdf.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 20,
+     "name": "Cuidado facial y corporal",
+     "level": 0,
+     "categories": [
+      {
+       "id": 189,
+       "name": "Cuidado corporal",
+       "level": 1,
+       "order": 241,
+       "categories": [
+        {
+         "id": 614,
+         "name": "Toallitas",
+         "level": 2,
+         "order": 241
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": 26,
+     "name": "Limpieza y hogar",
+     "level": 0,
+     "categories": [
+      {
+       "id": 238,
+       "name": "Papel higiénico y celulosa",
+       "level": 1,
+       "order": 374,
+       "categories": [
+        {
+         "id": 755,
+         "name": "Papel higiénico",
+         "level": 2,
+         "order": 374
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": "ud.",
+    "unit_size": 1.0,
+    "bulk_price": "0.05",
+    "unit_price": "0.80",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": 15,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "21.000",
+    "price_decreased": false,
+    "reference_price": "0.054",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "49619",
+   "display_name": "Papel hogar Compacto Absorbente Bosque Verde",
+   "brand": "Bosque Verde",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/49619/papel-hogar-compacto-absorbente-bosque-verde-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/c2b185d672f992dd957400a4f39d1f5b.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 26,
+     "name": "Limpieza y hogar",
+     "level": 0,
+     "categories": [
+      {
+       "id": 238,
+       "name": "Papel higiénico y celulosa",
+       "level": 1,
+       "order": 374,
+       "categories": [
+        {
+         "id": 756,
+         "name": "Rollo cocina",
+         "level": 2,
+         "order": 374
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": "servicios",
+    "unit_size": 3.0,
+    "bulk_price": "0.77",
+    "unit_price": "2.30",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": 300,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "21.000",
+    "price_decreased": false,
+    "reference_price": "0.767",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "49544",
+   "display_name": "Servilleta papel Bosque Verde",
+   "brand": "Bosque Verde",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/49544/servilleta-papel-bosque-verde-1-capa-30-x-30-cm-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/bfcc81e168ee5a8e58f26e2ba67dfb40.jpeg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 26,
+     "name": "Limpieza y hogar",
+     "level": 0,
+     "categories": [
+      {
+       "id": 238,
+       "name": "Papel higiénico y celulosa",
+       "level": 1,
+       "order": 374,
+       "categories": [
+        {
+         "id": 838,
+         "name": "Servilletas",
+         "level": 2,
+         "order": 374
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 200.0,
+    "bulk_price": "0.01",
+    "unit_price": "1.20",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "21.000",
+    "price_decreased": false,
+    "reference_price": "0.006",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "49173",
+   "display_name": "Papel Multiusos Resistente Bosque Verde",
+   "brand": "Bosque Verde",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/49173/papel-multiusos-resistente-bosque-verde-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/68a9193c73346578a71a679044434f6f.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 26,
+     "name": "Limpieza y hogar",
+     "level": 0,
+     "categories": [
+      {
+       "id": 238,
+       "name": "Papel higiénico y celulosa",
+       "level": 1,
+       "order": 374,
+       "categories": [
+        {
+         "id": 756,
+         "name": "Rollo cocina",
+         "level": 2,
+         "order": 374
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": "servicios",
+    "unit_size": 1.0,
+    "bulk_price": "3.75",
+    "unit_price": "3.75",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": 600,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "21.000",
+    "price_decreased": false,
+    "reference_price": "3.750",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "47609",
+   "display_name": "Pañuelos de papel Extra Suaves Bosque Verde",
+   "brand": "Bosque Verde",
+   "packaging": "Caja",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/47609/panuelos-papel-extra-suaves-bosque-verde-2-capas-caja",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/ee570e175d6894f08bb89c0c35c2e6ee.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 26,
+     "name": "Limpieza y hogar",
+     "level": 0,
+     "categories": [
+      {
+       "id": 238,
+       "name": "Papel higiénico y celulosa",
+       "level": 1,
+       "order": 374,
+       "categories": [
+        {
+         "id": 759,
+         "name": "Pañuelos",
+         "level": 2,
+         "order": 374
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 200.0,
+    "bulk_price": "0.01",
+    "unit_price": "1.35",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "21.000",
+    "price_decreased": false,
+    "reference_price": "0.007",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "49176",
+   "display_name": "Papel cocina Gigante Absorbente Bosque Verde",
+   "brand": "Bosque Verde",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/49176/papel-cocina-gigante-absorbente-bosque-verde-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/1754c20c79fab74549f3b7f5a05bfb80.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 26,
+     "name": "Limpieza y hogar",
+     "level": 0,
+     "categories": [
+      {
+       "id": 238,
+       "name": "Papel higiénico y celulosa",
+       "level": 1,
+       "order": 374,
+       "categories": [
+        {
+         "id": 756,
+         "name": "Rollo cocina",
+         "level": 2,
+         "order": 374
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": "servicios",
+    "unit_size": 1.0,
+    "bulk_price": "2.95",
+    "unit_price": "2.95",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": 375,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "21.000",
+    "price_decreased": false,
+    "reference_price": "2.950",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "49589",
+   "display_name": "Servilleta papel suave Bosque Verde",
+   "brand": "Bosque Verde",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/49589/servilleta-papel-suave-bosque-verde-2-capas-33-x-32-cm-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/8b47fff99894d468256430fb5afb856b.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 26,
+     "name": "Limpieza y hogar",
+     "level": 0,
+     "categories": [
+      {
+       "id": 238,
+       "name": "Papel higiénico y celulosa",
+       "level": 1,
+       "order": 374,
+       "categories": [
+        {
+         "id": 838,
+         "name": "Servilletas",
+         "level": 2,
+         "order": 374
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 100.0,
+    "bulk_price": "0.02",
+    "unit_price": "1.65",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "21.000",
+    "price_decreased": false,
+    "reference_price": "0.017",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  }
+ ]
+}

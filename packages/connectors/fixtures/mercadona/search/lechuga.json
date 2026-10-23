@@ -1,0 +1,725 @@
+{
+ "nbHits": 29,
+ "hits": [
+  {
+   "id": "68130",
+   "display_name": "Lechuga Iceberg",
+   "brand": "",
+   "packaging": "Pieza",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/68130/lechuga-iceberg-pieza",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/320cf3cbed15d3543322144333ce1a98.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 28,
+       "name": "Lechuga y ensalada preparada",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 254,
+         "name": "Lechuga",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.0,
+    "bulk_price": "1.05",
+    "unit_price": "1.05",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "1.050",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69670",
+   "display_name": "Lechuga iceberg cortada y lavada",
+   "brand": "",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69670/lechuga-iceberg-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/d4731916c523231e46eca0ff925913c7.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 28,
+       "name": "Lechuga y ensalada preparada",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 254,
+         "name": "Lechuga",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.25,
+    "bulk_price": "3.80",
+    "unit_price": "0.95",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "3.800",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69121",
+   "display_name": "Lechugas corazón romana",
+   "brand": "",
+   "packaging": null,
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69121/lechugas-corazon-romana-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/f073d57203d1d5b93f0aa0b07f5b1f3a.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 28,
+       "name": "Lechuga y ensalada preparada",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 254,
+         "name": "Lechuga",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": true,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 2.0,
+    "bulk_price": "0.88",
+    "unit_price": "1.75",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "0.875",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69122",
+   "display_name": "Lechuga corazón romana",
+   "brand": null,
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69122/lechuga-corazon-romana-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/ecea548419831d3cfa93562fbe38f8f6.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 28,
+       "name": "Lechuga y ensalada preparada",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 254,
+         "name": "Lechuga",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.0,
+    "bulk_price": "1.10",
+    "unit_price": "1.10",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "1.100",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69435",
+   "display_name": "Lechuga romana cortada y lavada",
+   "brand": "",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69435/lechuga-romana-cortada-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/de27c05991934ccea736560b54d21694.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 28,
+       "name": "Lechuga y ensalada preparada",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 254,
+         "name": "Lechuga",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.2,
+    "bulk_price": "5.75",
+    "unit_price": "1.15",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "5.750",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69114",
+   "display_name": "Lechuga hoja roble",
+   "brand": null,
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69114/lechuga-hoja-roble-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/76053a23da820d699b8ee7bd4a288131.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 28,
+       "name": "Lechuga y ensalada preparada",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 254,
+         "name": "Lechuga",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.0,
+    "bulk_price": "1.70",
+    "unit_price": "1.70",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "1.700",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69581",
+   "display_name": "Cogollos de lechuga",
+   "brand": "",
+   "packaging": null,
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69581/cogollos-lechuga-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/45f7e9b4705a782026f2b7365a72216b.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 28,
+       "name": "Lechuga y ensalada preparada",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 254,
+         "name": "Lechuga",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": true,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 3.0,
+    "bulk_price": "0.35",
+    "unit_price": "1.05",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "0.350",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69582",
+   "display_name": "Cogollos corazón de lechuga",
+   "brand": "",
+   "packaging": null,
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69582/cogollos-corazon-lechuga-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/7b21cbc693c021af52107cdd30fb3e0d.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 28,
+       "name": "Lechuga y ensalada preparada",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 254,
+         "name": "Lechuga",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": true,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 6.0,
+    "bulk_price": "0.33",
+    "unit_price": "2.00",
+    "approx_size": false,
+    "size_format": "ud",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "0.334",
+    "min_bunch_amount": 1.0,
+    "reference_format": "ud",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69984",
+   "display_name": "Espinacas baby lavadas",
+   "brand": "",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69984/espinaca-baby-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/93f2897c72efc76f59305ef61e360d6c.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 28,
+       "name": "Lechuga y ensalada preparada",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 254,
+         "name": "Lechuga",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.1,
+    "bulk_price": "11.50",
+    "unit_price": "1.15",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "11.500",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69757",
+   "display_name": "Ensalada mezcla brotes tiernos lavada",
+   "brand": "",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69757/ensalada-mezcla-brotes-tiernos-compuesta-brotes-batavia-roja-verde-lollo-rojo-rucula-espinaca-baby-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/cedcb3efedf4e23150f69621a434f073.jpeg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 28,
+       "name": "Lechuga y ensalada preparada",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 254,
+         "name": "Lechuga",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.1,
+    "bulk_price": "12.00",
+    "unit_price": "1.20",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "12.000",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69753",
+   "display_name": "Rúcula lavada",
+   "brand": "",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69753/rucula-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/83a2c7a099eeace37c9fd9081cfc8e76.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 28,
+       "name": "Lechuga y ensalada preparada",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 254,
+         "name": "Lechuga",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.05,
+    "bulk_price": "17.00",
+    "unit_price": "0.85",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "17.000",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  },
+  {
+   "id": "69719",
+   "display_name": "Canónigos lavados",
+   "brand": "",
+   "packaging": "Paquete",
+   "published": true,
+   "share_url": "https://tienda.mercadona.es/product/69719/canonigos-paquete",
+   "thumbnail": "https://prod-mercadona.imgix.net/images/f0e683ae77cdd6372eaafd6420cc0171.jpg?fit=crop&h=300&w=300",
+   "categories": [
+    {
+     "id": 1,
+     "name": "Fruta y verdura",
+     "level": 0,
+     "categories": [
+      {
+       "id": 28,
+       "name": "Lechuga y ensalada preparada",
+       "level": 1,
+       "order": 306,
+       "categories": [
+        {
+         "id": 254,
+         "name": "Lechuga",
+         "level": 2,
+         "order": 306
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 0.125,
+    "bulk_price": "9.60",
+    "unit_price": "1.20",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "9.600",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+   },
+   "unavailable_from": null,
+   "unavailable_weekdays": [],
+   "status": null,
+   "limit": 999
+  }
+ ]
+}

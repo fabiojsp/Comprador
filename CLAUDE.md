@@ -1,10 +1,10 @@
 # CLAUDE.md — Cesta Mallorca
 
-PWA (iPhone) que compara la compra online de supermercado en Mallorca **con el envío incluido** en Mercadona, Alcampo e Hiper Centro, y devuelve la lista de la tienda más barata con enlaces a cada producto.
+PWA (iPhone) que compara la compra online de supermercado en Mallorca **con el envío incluido** en Mercadona, Carrefour y Eroski (más Alcampo e Hiper Centro como extra), y devuelve la lista de la tienda más barata con enlaces a cada producto.
 - Especificación: `SPEC.md` (versión simple).
 - Estado real de cada tienda: `docs/TIENDAS.md`, que manda sobre cualquier suposición.
 
-El usuario no es técnico y solo usa el iPhone: **nada debe requerir instalar o ejecutar algo en su ordenador.**
+El usuario no es técnico y solo usa el iPhone: **nada debe requerir instalar o ejecutar algo en su ordenador** (el Mac va con él). Carrefour y Eroski bloquean la nube: se leen con un **atajo del iPhone** que consulta desde Safari con la conexión del usuario y envía las páginas en bruto a la app, que las interpreta en el servidor (parsers con fixtures).
 
 ## Stack
 - Monorepo con npm workspaces, TypeScript estricto, Node 22.
