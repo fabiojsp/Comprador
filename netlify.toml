@@ -1,0 +1,9 @@
+# Netlify: monorepo con npm workspaces; la app está en apps/web.
+[build]
+  base = "apps/web"
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
