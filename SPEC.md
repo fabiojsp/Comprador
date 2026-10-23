@@ -20,7 +20,7 @@ No hay login en las tiendas, no se rellena el carrito automáticamente y no hay 
 | Tiendas | Principales: **Mercadona, Carrefour y Eroski**. Extra: **Alcampo e Hiper Centro**. Fuera: Lidl (no vende comida online), Aldi y El Corte Inglés. |
 | Carrefour y Eroski | Bloquean los servidores en la nube y no se esquiva esa protección. Hay dos vías, las dos con conexión real (no de centro de datos): **(1) Atajo del iPhone** (Fase 1): el usuario abre la tienda en Safari, pulsa Compartir → "Cesta: leer precios" y su iPhone consulta la lista con su conexión; las páginas en bruto se envían a la app, que las interpreta. **(2) Mini PC en casa** (fase posterior, opcional): un equipo siempre encendido conectado al router hace lo mismo de forma automática. |
 | Datos del usuario | Perfil y listas se guardan **en el propio iPhone** (almacenamiento local de la PWA). Sin cuentas ni base de datos en esta versión. |
-| Acceso | La app se protege con **una contraseña sencilla** (variable de entorno en Vercel) para que nadie más use la URL. |
+| Acceso | La app se protege con **una contraseña sencilla** (variable de entorno en Netlify) para que nadie más use la URL. |
 | Emparejado | Heurística determinista; el usuario puede corregir un emparejado y la corrección se recuerda en el iPhone. Sin IA. |
 | Datos | Ningún precio, envío ni cobertura sin fuente y fecha. Si falta: "sin dato". |
 
@@ -28,7 +28,7 @@ No hay login en las tiendas, no se rellena el carrito automáticamente y no hay 
 | Tienda | Cómo se consulta | Envío | Mínimo | Cobertura |
 |---|---|---|---|---|
 | Mercadona | API pública de la web: el CP da el almacén y la búsqueda (Algolia pública) da precios por almacén | 8,20 € (oficial) | 60 € (oficial) | Por CP |
-| Alcampo | Un navegador ligero en Vercel fija la región a partir de la dirección (una vez); luego los precios se leen del HTML de su búsqueda | 7,00 € día siguiente / 9,90 € mismo día (oficial) | Sin mínimo | Por dirección |
+| Alcampo | Un navegador ligero en el servidor fija la región a partir de la dirección (una vez); luego los precios se leen del HTML de su búsqueda | 7,00 € día siguiente / 9,90 € mismo día (oficial) | Sin mínimo | Por dirección |
 | Hiper Centro | Su web (población de entrega → catálogo) | 6,95 € (en vivo) | Sin mínimo | Por población |
 | Carrefour | Atajo del iPhone: búsqueda de su web desde Safari | sin dato (se leerá de la web) | sin dato | se leerá de la web |
 | Eroski | Atajo del iPhone: búsqueda de su web desde Safari | sin dato (se leerá de la web) | sin dato | se leerá de la web |
@@ -69,8 +69,8 @@ docs/               TIENDAS.md · FRAGILIDAD.md · verificacion/*.json
   3. Navegador ligero solo cuando la web lo exige (Alcampo, para fijar la región).
   4. **Nunca** saltarse protecciones.
 - Ritmo humano: `Pacer` por tienda (una petición cada vez, pausas de 1,5–4 s, máx. 20 por minuto). Las tres tiendas se consultan en paralelo entre sí, pero cada una a ritmo humano.
-- Una comparación se divide en lotes cortos de productos para no superar el tiempo máximo de las funciones de Vercel; la PWA va pidiendo lotes y muestra el progreso.
-- Caché de precios en el servidor (en memoria o la caché de datos de Vercel) con `fetchedAt`. Un precio de más de 7 días se marca "desactualizado".
+- Una comparación se divide en lotes cortos de productos para no superar el tiempo máximo de las funciones de Netlify; la PWA va pidiendo lotes y muestra el progreso.
+- Caché de precios en el servidor (en memoria o Netlify Blobs) con `fetchedAt`. Un precio de más de 7 días se marca "desactualizado".
 
 ## 6. Cesta base y consumo
 Factores por rango de edad:
