@@ -25,8 +25,8 @@ export const STORE_LOGO: Partial<Record<StoreId, string>> = {
 
 export const APP_STORES: { id: StoreId; name: string; role: 'main' | 'extra'; access: StoreAccess; note?: string }[] = [
   { id: 'mercadona', name: 'Mercadona', role: 'main', access: 'cloud' },
-  { id: 'carrefour', name: 'Carrefour', role: 'main', access: 'shortcut', note: 'Se lee con el atajo del iPhone (llega en el siguiente paso).' },
-  { id: 'eroski', name: 'Eroski', role: 'main', access: 'shortcut', note: 'Se lee con el atajo del iPhone (llega en el siguiente paso).' },
+  { id: 'carrefour', name: 'Carrefour', role: 'main', access: 'shortcut', note: 'Se lee con el atajo del iPhone, con tu conexión.' },
+  { id: 'eroski', name: 'Eroski', role: 'main', access: 'shortcut', note: 'Se lee con el atajo del iPhone, con tu conexión.' },
   { id: 'alcampo', name: 'Alcampo', role: 'extra', access: 'soon', note: 'Tienda extra: llega en la Fase 2.' },
   { id: 'hipercentro', name: 'Hiper Centro', role: 'extra', access: 'soon', note: 'Tienda extra: llega en la Fase 2.' },
 ];

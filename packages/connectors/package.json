@@ -5,7 +5,9 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
-    "./mercadona": "./src/stores/mercadona/index.ts"
+    "./mercadona": "./src/stores/mercadona/index.ts",
+    "./shortcut": "./src/shortcut/index.ts",
+    "./block": "./src/shared/block-detect.ts"
   },
   "dependencies": {
     "@cesta/core": "*"

@@ -20,3 +20,15 @@ Qué se rompe con más facilidad y cómo detectarlo. Se actualiza al cerrar cada
 | Aldi | Detección de carrito por texto | Falso `unknown` si aparece la palabra "carrito" | Revisión manual |
 | Carrefour / Eroski / ECI | Bloqueo anti-bot desde servidores en la nube | `blockedBy` cloudflare / recaptcha / akamai | Esperado: tiendas fuera de alcance. **No esquivar.** |
 | Todas | Detección de páginas de bloqueo (`shared/block-detect.ts`) por título o texto | Un bloqueo nuevo se interpreta como página normal | Fixtures `blocks/*.html`; añadir la nueva página de bloqueo como fixture cuando aparezca |
+
+## Fase 1 — Atajo del iPhone (Carrefour, Eroski)
+
+| Pieza | Punto frágil | Síntoma | Cómo detectarlo / arreglarlo |
+|---|---|---|---|
+| Plantillas de búsqueda (`packages/connectors/src/shortcut/plan.ts`) | URL de búsqueda de Carrefour (`search-api`) y Eroski (`/es/search/results/`) **sin confirmar** hasta la primera captura real | El atajo responde ✅ pero las páginas vienen con estado ≠ 200 o sin productos | `GET /api/atajo/raw?store=carrefour` (con sesión) descarga la última captura; ajustar la plantilla en el servidor (el script del atajo no cambia) |
+| Script del atajo (`shortcut/script.ts`) | Depende de `completion()`, `atob`, `escape` y `fetch` en Safari | El atajo muestra "Error del atajo: …" | Test `shortcut.test.ts` (simulado) y prueba en Chromium real; si Apple cambia la acción, revisar la guía `/atajo` |
+| Envío del atajo | Tamaño: hasta ~4,5 MB (100 KB por búsqueda) | Netlify rechaza > 6 MB | Bajar el recorte en el script o partir el plan |
+| Comprobación anti-bot en Safari | Carrefour (Cloudflare) / Eroski (reCAPTCHA) pueden mostrarla también al usuario | `blocked > 0` en el resumen | El usuario espera a que cargue la tienda y repite. **Nunca** se resuelve por él |
+| Netlify Blobs (`apps/web/lib/kv.ts`) | Solo funciona dentro de Netlify; fuera usa memoria | Capturas que "desaparecen" en local | Esperado en local |
+| Hiper Centro (investigado) | Búsqueda `tienda.aspx/BusquedaProdAgrup` devuelve ids de agrupaciones; los productos llegan por *postback* ASP.NET (`UpProds`) | — | Pendiente (Fase 2) |
+| Alcampo (investigado) | `product-pages/search` sin navegador devuelve precios de la región por defecto (Madrid), no de Mallorca; fijar región exige token AWS WAF de navegador | — | Pendiente (Fase 2) |

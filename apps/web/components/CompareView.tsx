@@ -5,6 +5,7 @@ import { UNIT_LABEL, type FamilyProfile, type ListItem, type StoreId, type Store
 import { computeResult, fetchStores, runCompare, type CompareResult, type Pins, type Progress } from '@/lib/compare';
 import { STORE_LOGO, type StoreStatus } from '@/lib/stores';
 import { dateLabel, euro, qtyLabel } from './ui';
+import { ShortcutAction } from './ShortcutAction';
 
 function StoreLogo({ id, name, size = 'md' }: { id: StoreId; name: string; size?: 'md' | 'lg' }) {
   const src = STORE_LOGO[id];
@@ -25,7 +26,7 @@ const STATUS_TEXT: Record<string, string> = {
   unknown: 'Sin dato',
 };
 
-function StoreRow({ s }: { s: StoreStatus }) {
+function StoreRow({ s, queries }: { s: StoreStatus; queries: string[] }) {
   const t = s.terms;
   let line: string;
   if (s.access === 'cloud') {
@@ -37,7 +38,7 @@ function StoreRow({ s }: { s: StoreStatus }) {
   } else line = s.note ?? '';
   const ok = s.access === 'cloud' && s.coverage?.status === 'delivers';
   return (
-    <li className="flex items-center gap-3 py-2.5">
+    <li className="flex items-start gap-3 py-2.5">
       <StoreLogo id={s.storeId} name={s.name} />
       <div className="min-w-0">
         <p className="flex items-center gap-2 font-medium">
@@ -45,6 +46,7 @@ function StoreRow({ s }: { s: StoreStatus }) {
           {s.name} {s.role === 'extra' && <span className="text-xs font-normal text-muted">· extra</span>}
         </p>
         <p className="text-sm text-muted">{line}</p>
+        {s.access === 'shortcut' && <ShortcutAction storeId={s.storeId} name={s.name} queries={queries} />}
       </div>
     </li>
   );
@@ -247,7 +249,7 @@ export function CompareView({
       <section>
         <h2 className="mb-1 text-lg font-semibold">Tiendas para {cp}</h2>
         {storesError && <p className="text-sm text-clay">{storesError}</p>}
-        <ul className="divide-y divide-line">{(stores ?? []).map((s) => <StoreRow key={s.storeId} s={s} />)}</ul>
+        <ul className="divide-y divide-line">{(stores ?? []).map((s) => <StoreRow key={s.storeId} s={s} queries={[...new Set(active.map((i) => i.query))]} />)}</ul>
         {!stores && !storesError && <p className="text-sm text-muted">Comprobando tiendas…</p>}
       </section>
 

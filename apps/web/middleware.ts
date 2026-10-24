@@ -6,6 +6,8 @@ const PUBLIC = ['/login', '/api/login', '/manifest.webmanifest', '/icon.svg', '/
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   if (PUBLIC.includes(pathname) || pathname.startsWith('/logos/')) return NextResponse.next();
+  // El atajo del iPhone envía la captura sin cookie: la ruta valida su propio token de un solo uso.
+  if (pathname === '/api/atajo' && req.method === 'POST') return NextResponse.next();
   const ok = await verifyToken(req.cookies.get(COOKIE)?.value).catch(() => false);
   if (ok) return NextResponse.next();
   if (pathname.startsWith('/api/')) return NextResponse.json({ error: 'Necesitas entrar con la contraseña de la app.' }, { status: 401 });
