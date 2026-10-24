@@ -3,8 +3,20 @@
 import { useEffect, useMemo, useState } from 'react';
 import { UNIT_LABEL, type FamilyProfile, type ListItem, type StoreId, type StoreTotal } from '@cesta/core';
 import { computeResult, fetchStores, runCompare, type CompareResult, type Pins, type Progress } from '@/lib/compare';
-import type { StoreStatus } from '@/lib/stores';
+import { STORE_LOGO, type StoreStatus } from '@/lib/stores';
 import { dateLabel, euro, qtyLabel } from './ui';
+
+function StoreLogo({ id, name, size = 'md' }: { id: StoreId; name: string; size?: 'md' | 'lg' }) {
+  const src = STORE_LOGO[id];
+  const box = size === 'lg' ? 'h-12 w-24' : 'h-10 w-16';
+  if (!src) return null;
+  return (
+    <span className={`flex ${box} shrink-0 items-center justify-center rounded-lg bg-white p-1.5 ring-1 ring-line`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt={name} className="max-h-full max-w-full object-contain" loading="lazy" />
+    </span>
+  );
+}
 
 const STATUS_TEXT: Record<string, string> = {
   delivers: 'Reparte en tu zona',
@@ -25,10 +37,11 @@ function StoreRow({ s }: { s: StoreStatus }) {
   } else line = s.note ?? '';
   const ok = s.access === 'cloud' && s.coverage?.status === 'delivers';
   return (
-    <li className="flex items-start gap-3 py-2.5">
-      <span aria-hidden className={`mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full ${ok ? 'bg-olive' : 'bg-line'}`} />
+    <li className="flex items-center gap-3 py-2.5">
+      <StoreLogo id={s.storeId} name={s.name} />
       <div className="min-w-0">
-        <p className="font-medium">
+        <p className="flex items-center gap-2 font-medium">
+          <span aria-hidden className={`h-2 w-2 shrink-0 rounded-full ${ok ? 'bg-olive' : 'bg-line'}`} />
           {s.name} {s.role === 'extra' && <span className="text-xs font-normal text-muted">· extra</span>}
         </p>
         <p className="text-sm text-muted">{line}</p>
@@ -38,12 +51,16 @@ function StoreRow({ s }: { s: StoreStatus }) {
 }
 
 function Ticket({ total, name, highlight, onOpen, open }: { total: StoreTotal; name: string; highlight: boolean; onOpen: () => void; open: boolean }) {
+  const logo = <StoreLogo id={total.storeId} name={name} size="lg" />;
   const found = total.missing.length;
   return (
     <button type="button" onClick={onOpen} aria-expanded={open} className="block w-full text-left">
       <div className={`ticket-edge bg-card px-5 pb-7 pt-5 shadow-sm ${highlight ? 'ring-2 ring-olive' : ''}`}>
-        <div className="flex items-baseline justify-between">
-          <p className="font-mono text-sm font-semibold uppercase tracking-[0.15em]">{name}</p>
+        <div className="flex items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            {logo}
+            <p className="font-mono text-sm font-semibold uppercase tracking-[0.15em]">{name}</p>
+          </div>
           {highlight && <span className="rounded-full bg-olive-soft px-2 py-0.5 text-xs font-semibold text-olive">Más barata</span>}
         </div>
         <dl className="tabular mt-4 space-y-1 font-mono text-sm">

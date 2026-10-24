@@ -1,6 +1,6 @@
 # Cesta Mallorca
 
-Compara tu compra de supermercado en **Mercadona, Alcampo e Hiper Centro** con el envío incluido y te dice dónde sale más barata. Te da la lista final con un enlace a cada producto.
+Compara tu compra de supermercado en **Mercadona, Carrefour y Eroski** (y Alcampo e Hiper Centro como extra) con el envío incluido y te dice dónde sale más barata. Te da la lista final con un enlace a cada producto.
 
 **Solo necesitas el iPhone.** No hay que instalar nada en el ordenador.
 
@@ -17,7 +17,7 @@ Compara tu compra de supermercado en **Mercadona, Alcampo e Hiper Centro** con e
 
 ## Estado
 - **Fase 0 ✅**: verificación de tiendas. Ver [`docs/TIENDAS.md`](docs/TIENDAS.md).
-- **Fase 1**: lógica de la cesta, Mercadona y la app en el iPhone.
+- **Fase 1**: lógica de la cesta, Mercadona y la app en el iPhone (publicada); Carrefour y Eroski con el atajo del iPhone (en curso).
 - **Fase 2**: Alcampo e Hiper Centro.
 
 ## Documentos

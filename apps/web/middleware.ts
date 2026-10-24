@@ -5,7 +5,7 @@ const PUBLIC = ['/login', '/api/login', '/manifest.webmanifest', '/icon.svg', '/
 
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
-  if (PUBLIC.includes(pathname)) return NextResponse.next();
+  if (PUBLIC.includes(pathname) || pathname.startsWith('/logos/')) return NextResponse.next();
   const ok = await verifyToken(req.cookies.get(COOKIE)?.value).catch(() => false);
   if (ok) return NextResponse.next();
   if (pathname.startsWith('/api/')) return NextResponse.json({ error: 'Necesitas entrar con la contraseña de la app.' }, { status: 401 });

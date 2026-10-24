@@ -14,6 +14,15 @@ export interface StoreStatus {
   note?: string;
 }
 
+/** Logos facilitados por el usuario (public/logos). */
+export const STORE_LOGO: Partial<Record<StoreId, string>> = {
+  mercadona: '/logos/mercadona.png',
+  carrefour: '/logos/carrefour.png',
+  eroski: '/logos/eroski.png',
+  alcampo: '/logos/alcampo.png',
+  hipercentro: '/logos/hipercentro.png',
+};
+
 export const APP_STORES: { id: StoreId; name: string; role: 'main' | 'extra'; access: StoreAccess; note?: string }[] = [
   { id: 'mercadona', name: 'Mercadona', role: 'main', access: 'cloud' },
   { id: 'carrefour', name: 'Carrefour', role: 'main', access: 'shortcut', note: 'Se lee con el atajo del iPhone (llega en el siguiente paso).' },
