@@ -22,7 +22,9 @@ export interface ShortcutStoreConfig {
 // Primera versión: URLs a confirmar con la primera captura real (docs/FRAGILIDAD.md).
 export const SHORTCUT_STORES: Record<ShortcutStoreId, ShortcutStoreConfig> = {
   carrefour: {
-    start: 'https://www.carrefour.es/supermercado',
+    // No usar /supermercado/*: la app de Carrefour reclama esas URLs (apple-app-site-association)
+    // y el iPhone abriría la app en vez de Safari, sin el plan.
+    start: 'https://www.carrefour.es/',
     search: 'https://www.carrefour.es/search-api/query/v1/search?query={q}&scope=mobile&lang=es&rows=24&start=0&origin=default&f.op=OR',
     extras: ['https://www.carrefour.es/supermercado'],
   },

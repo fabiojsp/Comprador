@@ -51,7 +51,8 @@ describe('atajo del iPhone', () => {
   const url = planUrl(plan);
 
   it('el plan viaja en el hash y quita búsquedas repetidas', () => {
-    expect(url.startsWith('https://www.carrefour.es/supermercado#cesta=')).toBe(true);
+    // Fuera de /supermercado/*, que la app de Carrefour reclama como enlace universal.
+    expect(url.startsWith('https://www.carrefour.es/#cesta=')).toBe(true);
     expect(plan.q).toEqual(['leche semidesnatada', 'plátano']);
   });
 
@@ -70,7 +71,7 @@ describe('atajo del iPhone', () => {
     expect(posted).toHaveLength(1);
     expect(posted[0]).toMatchObject({ url: API, mode: 'no-cors' });
     expect(message).toMatch(/✅ 2 búsquedas enviadas/);
-    expect(payload).toMatchObject({ v: 1, t: plan.t, s: 'carrefour', at: 'https://www.carrefour.es/supermercado' });
+    expect(payload).toMatchObject({ v: 1, t: plan.t, s: 'carrefour', at: 'https://www.carrefour.es/' });
     const banana = payload!.pages.find((p) => p.q === 'plátano')!;
     expect(banana.body).toBe('<div>Plátano</div> ');
     expect(payload!.pages.find((p) => p.q === null)!.body).toContain('<script>cfg</script>'); // extras sin recortar

@@ -55,7 +55,7 @@ export function ShortcutGuide({ script }: { script: string }) {
           <p className="text-sm text-muted">No hace falta ninguna dirección: el código envía los precios a Cesta él solo.</p>
         </Step>
         <Step n={3} title="Cómo se usa">
-          <p>En Cesta → Comparar, pulsa <b>Leer precios</b> en Carrefour o Eroski. Se abre la tienda en Safari.</p>
+          <p>En Cesta → Comparar, pulsa <b>Leer precios</b> en Carrefour o Eroski. Se abre la tienda en Safari (no en su app: el atajo solo funciona en Safari).</p>
           <p>Si sale una comprobación de seguridad, espera a que cargue la tienda. Luego pulsa <b>Compartir</b> → <b>Cesta precios</b>.</p>
           <p>La primera vez te pedirá permiso para ejecutarse en la web de la tienda: pulsa <b>Permitir</b>. Tarda alrededor de 1 minuto. Cuando veas ✅, vuelve a Cesta.</p>
         </Step>
