@@ -14,5 +14,6 @@ export async function POST(req: Request) {
   const token = newToken();
   const plan: StoredPlan = { token, store: body.store, queries, createdAt: new Date().toISOString() };
   await kv().set(`plan/${token}`, plan);
-  return NextResponse.json({ token, url: planUrl(buildPlan(body.store, token, queries)) });
+  const api = `${new URL(req.url).origin}/api/atajo`;
+  return NextResponse.json({ token, url: planUrl(buildPlan(body.store, token, queries, api)) });
 }

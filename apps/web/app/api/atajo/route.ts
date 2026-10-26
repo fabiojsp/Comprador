@@ -8,17 +8,33 @@ export const maxDuration = 30;
 
 const NAMES = { carrefour: 'Carrefour', eroski: 'Eroski' } as const;
 
-// El atajo muestra esta respuesta como texto en el iPhone: mensajes cortos y claros.
-const text = (msg: string, status = 200) => new Response(msg, { status, headers: { 'content-type': 'text/plain; charset=utf-8' } });
+const escapeHtml = (s: string) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
+
+// El script del atajo envía en texto plano (fetch). Si la web de la tienda no lo deja,
+// envía un formulario y Safari abre esta respuesta: entonces se devuelve una página.
+function reply(msg: string, status: number, asPage: boolean): Response {
+  if (!asPage) return new Response(msg, { status, headers: { 'content-type': 'text/plain; charset=utf-8' } });
+  const html = `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cesta</title></head>
+<body style="margin:0;font-family:-apple-system,system-ui,sans-serif;background:#f6f1e7;color:#1d1b17">
+<main style="max-width:28rem;margin:0 auto;padding:3rem 1.25rem;text-align:center">
+<p style="font-size:1.25rem;line-height:1.5">${escapeHtml(msg)}</p>
+<a href="/" style="display:block;margin-top:2rem;padding:1rem;border-radius:1rem;background:#b5532f;color:#fff;font-weight:600;text-decoration:none">Volver a Cesta</a>
+</main></body></html>`;
+  return new Response(html, { status, headers: { 'content-type': 'text/html; charset=utf-8' } });
+}
 
 /** Recibe la captura del atajo. Público, pero solo acepta tokens de planes recientes. */
 export async function POST(req: Request) {
-  const raw = await req.text();
+  const asPage = (req.headers.get('content-type') ?? '').includes('application/x-www-form-urlencoded');
+  const text = (msg: string, status = 200) => reply(msg, status, asPage);
+
+  let raw = await req.text();
+  if (asPage) raw = new URLSearchParams(raw).get('datos') ?? '';
   let payload: (CapturePayload & { error?: string }) | null = null;
   try {
     payload = JSON.parse(raw);
   } catch {
-    return text('❌ El atajo no envió datos válidos. Revisa el paso 3 de la guía: el cuerpo debe ser el «Resultado de JavaScript».', 400);
+    return text('❌ El atajo no envió datos válidos. Vuelve a copiar el código desde la guía del atajo en Cesta.', 400);
   }
   if (payload?.error) return text(`❌ ${payload.error}`, 400);
   const invalid = validatePayload(payload);

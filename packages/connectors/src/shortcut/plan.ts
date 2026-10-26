@@ -48,6 +48,8 @@ export interface ShortcutPlan {
   q: string[];
   /** Páginas extra. */
   x: string[];
+  /** Dirección de la app a la que el script envía la captura. */
+  api: string;
 }
 
 export const HASH_KEY = 'cesta=';
@@ -60,9 +62,9 @@ export function fromBase64Url(s: string): string {
   return Buffer.from(s.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString('utf8');
 }
 
-export function buildPlan(store: ShortcutStoreId, token: string, queries: string[]): ShortcutPlan {
+export function buildPlan(store: ShortcutStoreId, token: string, queries: string[], api: string): ShortcutPlan {
   const cfg = SHORTCUT_STORES[store];
-  return { v: 1, t: token, s: store, tpl: cfg.search, q: [...new Set(queries)], x: cfg.extras };
+  return { v: 1, t: token, s: store, tpl: cfg.search, q: [...new Set(queries)], x: cfg.extras, api };
 }
 
 /** URL que abre la app en Safari: la tienda + el plan en el hash (el hash nunca llega al servidor de la tienda). */

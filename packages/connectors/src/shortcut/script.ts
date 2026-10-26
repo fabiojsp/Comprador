@@ -1,14 +1,17 @@
 // Script que el usuario pega en la acción «Ejecutar JavaScript en la página web» del atajo.
-// Es fijo: lee el plan del hash (#cesta=...), descarga las búsquedas en la propia
-// página de la tienda (misma web, conexión y sesión del usuario, a ritmo humano)
-// y devuelve un JSON con las respuestas recortadas. No inicia sesión, no compra,
-// no toca CAPTCHAs: si la tienda muestra una comprobación, la pasa el usuario en Safari.
+// Es la ÚNICA acción del atajo. Es fijo: lee el plan del hash (#cesta=...), descarga las
+// búsquedas en la propia página de la tienda (misma web, conexión y sesión del usuario,
+// a ritmo humano) y envía el resultado a la app:
+//   1) fetch POST "no-cors" a plan.api (si la política de la web lo permite),
+//   2) si no, un formulario POST que abre la app en Safari con la confirmación.
+// No inicia sesión, no compra, no toca CAPTCHAs: si la tienda muestra una comprobación,
+// la pasa el usuario en Safari.
 
 export const SHORTCUT_SCRIPT = String.raw`(async function () {
-  var done = function (o) { completion(JSON.stringify(o)); };
+  var done = function (msg) { completion(msg); };
   try {
     var h = location.hash, i = h.indexOf('cesta=');
-    if (i < 0) { done({ error: 'Abre la tienda desde la app Cesta con el botón «Leer precios».' }); return; }
+    if (i < 0) { done('❌ Abre la tienda desde la app Cesta con el botón «Leer precios».'); return; }
     var b = h.slice(i + 6).replace(/-/g, '+').replace(/_/g, '/');
     var plan = JSON.parse(decodeURIComponent(escape(atob(b))));
     var t0 = Date.now(), pages = [];
@@ -35,8 +38,20 @@ export const SHORTCUT_SCRIPT = String.raw`(async function () {
       await grab(plan.tpl.replace('{q}', encodeURIComponent(plan.q[j])), plan.q[j], false);
       await pause();
     }
-    done({ v: 1, t: plan.t, s: plan.s, at: location.href.split('#')[0], ua: navigator.userAgent, pages: pages, ms: Date.now() - t0 });
+    var data = JSON.stringify({ v: 1, t: plan.t, s: plan.s, at: location.href.split('#')[0], ua: navigator.userAgent, pages: pages, ms: Date.now() - t0 });
+    var n = pages.filter(function (p) { return p.q !== null && p.status === 200; }).length;
+    try {
+      await fetch(plan.api, { method: 'POST', mode: 'no-cors', headers: { 'content-type': 'text/plain' }, body: data });
+      done('✅ ' + n + ' búsquedas enviadas a Cesta. Vuelve a la app.');
+    } catch (e) {
+      var f = document.createElement('form');
+      f.method = 'POST'; f.action = plan.api; f.style.display = 'none';
+      var ta = document.createElement('textarea'); ta.name = 'datos'; ta.value = data;
+      f.appendChild(ta); document.body.appendChild(f);
+      done('✅ ' + n + ' búsquedas listas. Se abrirá Cesta para recibirlas.');
+      setTimeout(function () { f.submit(); }, 300);
+    }
   } catch (e) {
-    done({ error: 'Error del atajo: ' + String(e) });
+    done('❌ Error del atajo: ' + String(e));
   }
 })();`;
